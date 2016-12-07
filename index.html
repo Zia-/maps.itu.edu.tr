@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
     <!--<link rel="stylesheet" href="css/leaflet-v0.7.7.css" />-->
     <link href='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css' rel='stylesheet' />
+    <!--<link href='https://api.mapbox.com/mapbox-gl-js/v0.28.0/mapbox-gl.css' rel='stylesheet' />-->
     <!--<link href='css/mapbox-v2.4.0.css' rel='stylesheet' />-->
     <link rel="stylesheet" href="css/bootstrap-v3.3.6.css">
     <!-- <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet"> -->
@@ -218,22 +219,22 @@
 
   <div class="btn-group rasterLayers" data-toggle="buttons"> <!--More http://getbootstrap.com/javascript/#buttons-checkbox-radio-->
     <label class="btn btn-default">
-      <input type="radio">Istanbul Technical University
+      <input name="hotbuttons" type="radio" id="itu" value="itu">Istanbul Technical University
     </label>
     <label class="btn btn-default">
-      <input type="radio">Ayazaga Campus
+      <input name="hotbuttons" type="radio" id="ayazaga" value="ayazaga">Ayazaga Campus
     </label>
     <label class="btn btn-default">
-      <input type="radio">Taskisla Campus
+      <input name="hotbuttons" type="radio" id="taskisla" value="taskisla">Taskisla Campus
     </label>
     <label class="btn btn-default">
-      <input type="radio">Gumussuyu Campus
+      <input name="hotbuttons" type="radio" id="gumussuyu" value="gumussuyu">Gumussuyu Campus
     </label>
     <label class="btn btn-default">
-      <input type="radio">Macka Campus
+      <input name="hotbuttons" type="radio" id="macka" value="macka">Macka Campus
     </label>
     <label class="btn btn-default">
-      <input type="radio">Tuzla Campus
+      <input name="hotbuttons" type="radio" id="tuzla" value="tuzla">Tuzla Campus
     </label>
   </div>
 
@@ -322,16 +323,15 @@
 
 <!-- <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script> -->
 <script src='js/mapbox-v2.4.0.js'></script>
-<script src="js/leaflet-heat-v0.1.3.js"></script>
+<!--<script src='js/mapbox-gl-v0.28.0.js'></script>-->
+<!--<script src="js/leaflet-heat-v0.1.3.js"></script>-->
 <script src="js/jquery.min-v1.12.2.js"></script>
 <script src="js/bootstrap.min-v3.3.6.js"></script>
 <!-- <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script> -->
 <script src="js/mapboxMaps.js"></script>
-<script src="js/frpPixelSeviri.js"></script>
-<script src="js/firmsModis.js"></script>
-<!-- <script src="js/firmsViirs1.js"></script> -->
-<script src="js/firmsViirs.js"></script>
 <script src="js/documentLoad.js"></script>
+<script src="js/itucampuspolylines.js"></script>
+<script src="js/customfunctions.js"></script>
 <!-- <script src="http://zia-.github.io/firemap_data/geo_2015.js"></script> -->
 <script>
 // // Fix mapbox token

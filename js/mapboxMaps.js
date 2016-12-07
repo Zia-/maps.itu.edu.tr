@@ -3,7 +3,7 @@ L.mapbox.accessToken = 'pk.eyJ1IjoiemlhLW0iLCJhIjoiQjM5aVpfTSJ9.s_U7YxQCK-Zq5SaJ
 // 35.570652, 24.884267, 42.425880, 45.252919 Turkey bounds
 // 40.903699, 28.697378  41.177273, 29.276363 Istanbul bounds which was used to download osm data
 // Construct a bounding box for this map that the user cannot move out of
-var minlatbound = 32.774850, minlonbound = 20.551105, maxlatbound = 44.900607, maxlonbound = 49.930658;
+var minlatbound = 40.707987, minlonbound = 28.318564, maxlatbound = 41.379143, maxlonbound = 29.925314;
 // var minlatbound = -6.983754, minlonbound = 38.982368, maxlatbound = -6.574648, maxlonbound = 39.500786;
 var southWestbound = L.latLng(minlatbound, minlonbound),
     northEastbound = L.latLng(maxlatbound, maxlonbound),
@@ -414,12 +414,12 @@ map.fitBounds(bounds);
 
 // Other mapbox layers https://www.mapbox.com/api-documentation/#maps
 var layers = {
-      Dark: L.mapbox.tileLayer('mapbox.dark'),
+      /*Dark: L.mapbox.tileLayer('mapbox.dark'),
       Streets: L.mapbox.tileLayer('mapbox.streets'),
       Light: L.mapbox.tileLayer('mapbox.light'),
-      Satellite: L.mapbox.tileLayer('mapbox.satellite'),
+      Satellite: L.mapbox.tileLayer('mapbox.satellite'),*/
       StreetsSatellite: L.mapbox.tileLayer('mapbox.streets-satellite'),
-      Wheatpaste: L.mapbox.tileLayer('mapbox.wheatpaste'),
+      /*Wheatpaste: L.mapbox.tileLayer('mapbox.wheatpaste'),
       StreetsBasic: L.mapbox.tileLayer('mapbox.streets-basic'),
       Comic: L.mapbox.tileLayer('mapbox.comic'),
       Outdoors: L.mapbox.tileLayer('mapbox.outdoors'),
@@ -427,8 +427,8 @@ var layers = {
       Pencil: L.mapbox.tileLayer('mapbox.pencil'),
       Pirates: L.mapbox.tileLayer('mapbox.pirates'),
       Emerald: L.mapbox.tileLayer('mapbox.emerald'),
-      HighContrast: L.mapbox.tileLayer('mapbox.high-contrast')
+      HighContrast: L.mapbox.tileLayer('mapbox.high-contrast')*/
 };
 
-layers.Dark.addTo(map);
-L.control.layers(layers).addTo(map);
+layers.StreetsSatellite.addTo(map);
+//L.control.layers(layers).addTo(map);
