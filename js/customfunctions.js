@@ -80,8 +80,8 @@ function hotbuttonfun(x){
 
 // Navigate Function
 function navigate(){
-  var start  =  L.marker([41.105481, 29.023517]).bindPopup('Tuzla Campus');
-  var end  =  L.marker([41.106491, 29.021161]).bindPopup('Tuzla Campus');
+  var start  =  L.marker([41.105481, 29.023517]).bindPopup('Merkezi Derslik Binasi');
+  var end  =  L.marker([41.106491, 29.021161]).bindPopup('IT Building');
   var route1color = {color: '#00B3FD'}, route1 = L.polyline(route1line, route1color);
   var route2color = {color: '#FF9E00'}, route2 = L.polyline(route2line, route2color);
   var route3color = {color: '#800080'}, route3 = L.polyline(route3line, route3color);
