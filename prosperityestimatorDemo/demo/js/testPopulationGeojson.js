@@ -251,4 +251,17 @@ function heatMap(){
 
   });
 
+};
+
+
+
+////////////////////////
+// Select Diff Maps
+
+function chooseMapStyle(){
+  $('#myModal2').modal('show')
+  $('input[type=radio]').click(function() {
+    L.mapbox.styleLayer('mapbox://styles/mapbox/' + $(this).val() + '-v9').addTo(map);
+    //$(this).val()
+  });
 }
