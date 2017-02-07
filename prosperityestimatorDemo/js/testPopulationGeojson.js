@@ -130,6 +130,8 @@ var drawControl = new L.Control.Draw({
   }
 }).addTo(map);
 
+drawControl.setPosition("topright")
+
 map.on('draw:created', showFeatureGeometricalAtribute);
 map.on('draw:edited', showFeatureGeometricalAtributeEdited);
 
@@ -174,5 +176,24 @@ function showFeatureGeometricalAtribute(e) {
     featureGroup.clearLayers();
     featureGroup.addLayer(e.layer);
   }
-
 }
+
+
+
+////////////////////////
+// Add Polygon
+
+map.on('mousemove', function (e) {
+    /*document.getElementById('info').innerHTML =
+    // e.point is the x, y coordinates of the mousemove event relative
+    // to the top-left corner of the map
+    JSON.stringify(e.containerPoint) +
+        // e.lngLat is the longitude, latitude geographical position of the event
+    JSON.stringify(e.latlng);*/
+    //console.log(JSON.stringify(e.containerPoint));
+    //document.getElementById("coord").value= JSON.stringify(e.containerPoint);
+    document.getElementById("xyPointer").innerText = "X:" + e.containerPoint["x"] + ",Y:" + e.containerPoint["y"];
+    document.getElementById("latlngPointer").innerText = "Lat:" + e.latlng["lat"].toFixed(5) + ",Lng:" + e.latlng["lng"].toFixed(5);
+    document.getElementById("zoomLevel").innerText = "Zoom:" + map.getZoom();
+
+});
