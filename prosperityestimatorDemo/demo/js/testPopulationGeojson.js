@@ -197,3 +197,58 @@ map.on('mousemove', function (e) {
     document.getElementById("zoomLevel").innerText = "Zoom:" + map.getZoom();
 
 });
+
+
+
+////////////////////////
+// Heat-Map
+
+function convertToArray(geojson){
+  var poiArray = window[geojson];
+  var jsarray = [];
+  for (var i=0; i<poiArray["features"].length; i++){
+    var singleCoordArray = [];
+    singleCoordArray.push(poiArray["features"][i]["geometry"]["coordinates"][1]);
+    singleCoordArray.push(poiArray["features"][i]["geometry"]["coordinates"][0]);
+    jsarray.push(singleCoordArray)
+  }
+  return jsarray
+}
+
+function heatMap(){
+  // Following code will remove all GeoJSON layers and reset corresponding buttons
+  map.eachLayer(function (layer) {
+    try {
+      if (layer['_geojson'][0] !== 'undefined'){
+        map.removeLayer(layer)
+      }
+    } catch (e) {}
+  });
+  var ul = document.getElementById("menu");
+  var items = ul.getElementsByTagName("li");
+  for (var i = 0; i < items.length; ++i) {
+    if ($(items[i]).attr('class') == "active"){
+      $(items[i]).removeClass("active")
+    } else {}
+  }
+  //////////////////////////////
+
+  $('#myModal').modal('show')
+  $('input[type=radio]').click(function() {
+    map.eachLayer(function (layer) {
+      console.log(layer);
+      /*try {
+        if (layer['_latlngs'] !== 'undefined'){
+          //map.removeLayer(layer)
+          console.log(layer);
+        }
+      } catch (e) {}*/
+    });
+
+    addressPoints = addressPoints.map(function (p) { return [p[0], p[1]]; });
+    var heatMap = L.heatLayer(convertToArray($(this).val()));
+    map.addLayer(heatMap);
+
+  });
+
+}

@@ -7,6 +7,6 @@ var southWestbound = L.latLng(minlatbound, minlonbound),
 var map = L.mapbox.map('map-div', 'mapbox.streets-satellite', {
     maxBounds: bounds,
     maxZoom: 19,
-    minZoom: 15
+    minZoom: 13
 });
 map.fitBounds(bounds)

@@ -1696,6 +1696,1026 @@ var restaurant = {
         "marker-size": "small",
         "marker-symbol": "restaurant"
       }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.0322,
+          41.0501
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Ortaköy Mh. Muallim Naci Cd. No:44, Ortaköy, Beşiktaş, İstanbul",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.031055,
+          41.04994
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Ortaköy Mh. Muallim Naci Cd. No:65, Ortaköy, Beşiktaş, İstanbul",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.030621,
+          41.049809
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Ortaköy Mh. Ortaköy Iskele Meydanı No:8, Ortaköy, Beşiktaş, İstanbul",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.027592,
+          41.048719
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Muallim Naci Cad. No:51/A, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.027437,
+          41.04762
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Ortaköy Mh. Muallim Naci Cd. Yalı Çıkmazı Sk. No:20, Ortaköy, Beşiktaş, İstanbul",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.025824,
+          41.050088
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Portakal Yokuşu No:2, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.028679,
+          41.052235
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Portakal Yokuşu Cad. No:17, Ortaköy, Beşiktaş, İstanbul - Avrupa (Symbola Bosphorus İçinde)",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.027231,
+          41.048652
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Ortaköy Mah. Muallim Naci Cad. No:41, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.033105,
+          41.051743
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Muallim Naci Cad. No:71, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.032247,
+          41.049761
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Ortaköy Mh. Muallim Naci Cd. No:43/A, Ortaköy, Beşiktaş, İstanbul",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.030936,
+          41.059152
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Ulus Mh. Ahmet Adnan Saygun Cd. No:5, Ulus, Beşiktaş, İstanbul",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.023507,
+          41.053291
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Mecidiye Mah. Dereboyu Cad. No:96/D, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.0322,
+          41.0501
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Ortaköy Mh. Muallim Naci Cd. No:44, Ortaköy, Beşiktaş, İstanbul",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.031055,
+          41.04994
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Ortaköy Mh. Muallim Naci Cd. No:65, Ortaköy, Beşiktaş, İstanbul",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.030621,
+          41.049809
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Ortaköy Mh. Ortaköy Iskele Meydanı No:8, Ortaköy, Beşiktaş, İstanbul",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.027592,
+          41.048719
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Muallim Naci Cad. No:51/A, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.027437,
+          41.04762
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Ortaköy Mh. Muallim Naci Cd. Yalı Çıkmazı Sk. No:20, Ortaköy, Beşiktaş, İstanbul",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.025824,
+          41.050088
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Portakal Yokuşu No:2, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.028679,
+          41.052235
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Portakal Yokuşu Cad. No:17, Ortaköy, Beşiktaş, İstanbul - Avrupa (Symbola Bosphorus İçinde)",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.027231,
+          41.048652
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Ortaköy Mah. Muallim Naci Cad. No:41, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.033105,
+          41.051743
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Muallim Naci Cad. No:71, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.032247,
+          41.049761
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Ortaköy Mh. Muallim Naci Cd. No:43/A, Ortaköy, Beşiktaş, İstanbul",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.030936,
+          41.059152
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Ulus Mh. Ahmet Adnan Saygun Cd. No:5, Ulus, Beşiktaş, İstanbul",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.023507,
+          41.053291
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Mecidiye Mah. Dereboyu Cad. No:96/D, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.0322,
+          41.0501
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Ortaköy Mh. Muallim Naci Cd. No:44, Ortaköy, Beşiktaş, İstanbul",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.031055,
+          41.04994
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Ortaköy Mh. Muallim Naci Cd. No:65, Ortaköy, Beşiktaş, İstanbul",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.030621,
+          41.049809
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Ortaköy Mh. Ortaköy Iskele Meydanı No:8, Ortaköy, Beşiktaş, İstanbul",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.027592,
+          41.048719
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Muallim Naci Cad. No:51/A, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.027437,
+          41.04762
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Ortaköy Mh. Muallim Naci Cd. Yalı Çıkmazı Sk. No:20, Ortaköy, Beşiktaş, İstanbul",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.025824,
+          41.050088
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Portakal Yokuşu No:2, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.028679,
+          41.052235
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Portakal Yokuşu Cad. No:17, Ortaköy, Beşiktaş, İstanbul - Avrupa (Symbola Bosphorus İçinde)",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.027231,
+          41.048652
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Ortaköy Mah. Muallim Naci Cad. No:41, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.033105,
+          41.051743
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Muallim Naci Cad. No:71, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.032247,
+          41.049761
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Ortaköy Mh. Muallim Naci Cd. No:43/A, Ortaköy, Beşiktaş, İstanbul",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.030936,
+          41.059152
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Ulus Mh. Ahmet Adnan Saygun Cd. No:5, Ulus, Beşiktaş, İstanbul",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.023507,
+          41.053291
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Mecidiye Mah. Dereboyu Cad. No:96/D, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.0322,
+          41.0501
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Ortaköy Mh. Muallim Naci Cd. No:44, Ortaköy, Beşiktaş, İstanbul",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.031055,
+          41.04994
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Ortaköy Mh. Muallim Naci Cd. No:65, Ortaköy, Beşiktaş, İstanbul",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.030621,
+          41.049809
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Ortaköy Mh. Ortaköy Iskele Meydanı No:8, Ortaköy, Beşiktaş, İstanbul",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.027592,
+          41.048719
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Muallim Naci Cad. No:51/A, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.027437,
+          41.04762
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Ortaköy Mh. Muallim Naci Cd. Yalı Çıkmazı Sk. No:20, Ortaköy, Beşiktaş, İstanbul",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.025824,
+          41.050088
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Portakal Yokuşu No:2, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.028679,
+          41.052235
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Portakal Yokuşu Cad. No:17, Ortaköy, Beşiktaş, İstanbul - Avrupa (Symbola Bosphorus İçinde)",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.027231,
+          41.048652
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Ortaköy Mah. Muallim Naci Cad. No:41, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.033105,
+          41.051743
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Muallim Naci Cad. No:71, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.032247,
+          41.049761
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Ortaköy Mh. Muallim Naci Cd. No:43/A, Ortaköy, Beşiktaş, İstanbul",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.030736,
+          41.059652
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Ulus Mh. Ahmet Adnan Saygun Cd. No:5, Ulus, Beşiktaş, İstanbul",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.023407,
+          41.053591
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Mecidiye Mah. Dereboyu Cad. No:96/D, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.0321,
+          41.0503
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Ortaköy Mh. Muallim Naci Cd. No:44, Ortaköy, Beşiktaş, İstanbul",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.031755,
+          41.04964
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Ortaköy Mh. Muallim Naci Cd. No:65, Ortaköy, Beşiktaş, İstanbul",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.030121,
+          41.049409
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Ortaköy Mh. Ortaköy Iskele Meydanı No:8, Ortaköy, Beşiktaş, İstanbul",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.027492,
+          41.048519
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Muallim Naci Cad. No:51/A, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.027437,
+          41.04762
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Ortaköy Mh. Muallim Naci Cd. Yalı Çıkmazı Sk. No:20, Ortaköy, Beşiktaş, İstanbul",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.025324,
+          41.050188
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Portakal Yokuşu No:2, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.028679,
+          41.052235
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Portakal Yokuşu Cad. No:17, Ortaköy, Beşiktaş, İstanbul - Avrupa (Symbola Bosphorus İçinde)",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.027131,
+          41.048952
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Ortaköy Mah. Muallim Naci Cad. No:41, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.033005,
+          41.051143
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Muallim Naci Cad. No:71, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.032347,
+          41.049961
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Ortaköy Mh. Muallim Naci Cd. No:43/A, Ortaköy, Beşiktaş, İstanbul",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.030836,
+          41.059252
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Ulus Mh. Ahmet Adnan Saygun Cd. No:5, Ulus, Beşiktaş, İstanbul",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.023407,
+          41.053391
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "rank": "1",
+        "description": "Mecidiye Mah. Dereboyu Cad. No:96/D, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "marker-color": "#DF7401",
+        "marker-size": "small",
+        "marker-symbol": "restaurant"
+      }
     }
   ]
 };
@@ -2375,3 +3395,7 @@ var atm = {
     }
   ]
 };
+
+var addressPoints = [
+[41.051944, 29.029189, "571"],
+[41.056525, 29.026039, "486"]]

@@ -14,6 +14,7 @@
   <!--<link href='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css' rel='stylesheet' />-->
   <link href='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.css' rel='stylesheet' />
   <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+  <!--<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />-->
   <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-draw/v0.2.3/leaflet.draw.css' rel='stylesheet' />
   <!-- <link href='css/bootstrap-glyphicons-master/css/bootstrap.icon-large.min.css' rel='stylesheet' /> -->
   <link href='css/bootstrap-glyphicons-all-master/glyphicons-free.css' rel='stylesheet' />
@@ -62,7 +63,7 @@
                   <div style="width:30px;" class="btn-group" role="group" aria-label="..."></div>
                   <!-- Following are custom buttons -->
                   <div class="btn-group" role="group" aria-label="...">
-                    <button title="Heat-Map" data-placement='bottom' type="button" class="btn btn-default toolbar"><span class="glyphicon glyphicon-heat"></i></button>
+                    <button title="Heat-Map" data-placement='bottom' type="button" class="btn btn-default toolbar" onclick="heatMap()"><span class="glyphicon glyphicon-heat"></i></button>
                   </div>
                   <div class="btn-group" role="group" aria-label="...">
                     <button title="Time-Series" data-placement='bottom' type="button" class="btn btn-default toolbar"><span class="glyphicon glyphicon-time"></i></button>
@@ -241,12 +242,94 @@
         </div>
         <!-- /#map-div -->
     </div>
+
+
+    <!--To Select fro Heat-Map-->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <h4 class="modal-title" id="myModalLabel">Plot Heat-Map</h4>
+          </div>
+          <div class="modal-body">
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="atm"> ATM
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="bank"> Bank
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="bar"> Bar
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="beautyCenter"> Beauty Center
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="carParking"> Car Parking
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="groceryStore"> Grocery Store
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="highSchool"> High School
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="hotel"> Hotel
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="library"> Library
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="market"> Market
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="middleSchool"> Middle School
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="mosque"> Mosque
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="pharmacy"> Pharmacy
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="police"> Police
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="primarySchool"> Primary School
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="restaurant"> Restaurant
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="sportsClub"> Sports Club
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="supermarket"> Supermarket
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="theater"> Theater
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="workCenter"> Work Center
+            </label>
+          </div>
+          <!--<div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>-->
+        </div>
+      </div>
+    </div>
+
     <!-- /#wrapper -->
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <!--<script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>-->
     <script src='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.js'></script>
+    <!--<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>-->
+    <script src="http://leaflet.github.io/Leaflet.heat/dist/leaflet-heat.js"></script>
     <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-draw/v0.2.3/leaflet.draw.js'></script>
     <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-geodesy/v0.1.0/leaflet-geodesy.js'></script>
     <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
@@ -261,5 +344,6 @@
     <script src="js/testPopulationGeojson.js"></script>
     <script src="js/testChartPopulation.js"></script>
     <script src="js/documentLoad.js"></script>
+
 </body>
 </html>
