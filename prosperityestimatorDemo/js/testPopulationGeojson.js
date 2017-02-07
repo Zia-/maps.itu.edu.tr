@@ -68,6 +68,7 @@ function loadData() {
 
 
 ////////////////////////
+// Add POI Layers
 
 var featureLayerRegionalBoundary = L.mapbox.featureLayer(regionalBoundary);
 var featureLayerWorkCenter = L.mapbox.featureLayer(workCenter);
@@ -108,3 +109,70 @@ $("#menu li").on("click", function(){
   }
 
 });
+
+
+
+
+////////////////////////
+// Add Polygon
+
+var featureGroup = L.featureGroup().addTo(map);
+var drawControl = new L.Control.Draw({
+  edit: {
+    featureGroup: featureGroup
+  },
+  draw: {
+    polygon: true,
+    polyline: true,
+    rectangle: true,
+    circle: false,
+    marker: true
+  }
+}).addTo(map);
+
+map.on('draw:created', showFeatureGeometricalAtribute);
+map.on('draw:edited', showFeatureGeometricalAtributeEdited);
+
+function showFeatureGeometricalAtributeEdited(e) {
+  e.layers.eachLayer(function(layer) {
+    showFeatureGeometricalAtribute({ layer: layer });
+  });
+}
+function showFeatureGeometricalAtribute(e) {
+  if (e.layerType === 'polygon'){
+    featureGroup.clearLayers();
+    featureGroup.addLayer(e.layer);
+    e.layer.bindPopup((LGeo.area(e.layer) / 1).toFixed(2) + ' m<sup>2</sup>');
+    e.layer.openPopup();
+  } else if (e.layerType === 'polyline'){
+    featureGroup.clearLayers();
+    featureGroup.addLayer(e.layer);
+    var tempLatLng = null;
+    var totalDistance = 0.00000;
+    $.each(e.layer._latlngs, function(i, latlng){
+        if(tempLatLng == null){
+            tempLatLng = latlng;
+            return;
+        }
+        totalDistance += tempLatLng.distanceTo(latlng);
+        tempLatLng = latlng;
+    });
+    e.layer.bindPopup((totalDistance).toFixed(2) + ' meters');
+    e.layer.openPopup();
+  } else if (e.layerType === 'rectangle'){
+    featureGroup.clearLayers();
+    featureGroup.addLayer(e.layer);
+    e.layer.bindPopup((LGeo.area(e.layer) / 1).toFixed(2) + ' m<sup>2</sup>');
+    e.layer.openPopup();
+  } else if (e.layerType === 'circle'){
+    var area = 0;
+    var radius = e.layer.getRadius();
+    area = (Math.PI) * (radius * radius);
+    e.layer.bindPopup((area / 1).toFixed(2) + ' m<sup>2</sup>');
+    e.layer.openPopup();
+  } else if (e.layerType === 'marker'){
+    featureGroup.clearLayers();
+    featureGroup.addLayer(e.layer);
+  }
+
+}

@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
   <link href='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css' rel='stylesheet' />
   <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+  <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-draw/v0.2.3/leaflet.draw.css' rel='stylesheet' />
   <!-- <link href='css/bootstrap-glyphicons-master/css/bootstrap.icon-large.min.css' rel='stylesheet' /> -->
   <link href='css/bootstrap-glyphicons-all-master/glyphicons-free.css' rel='stylesheet' />
   <link href="css/sidebarMenu.css" rel="stylesheet">
@@ -26,7 +27,7 @@
                     <!-- <button type="button" class="navbar-toggle collapsed btn btn-default btn-sm" data-toggle="collapse"  id="menu-toggle">
                       <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
                     </button> -->
-                    <a class="navbar-brand" href="#"><i class="fa fa-smile-o fa-4"></i> Prosperity Estimator</a>
+                    <a class="navbar-brand" href="#"><i class="fa fa-smile-o fa-4"></i> Ortakoy, Istanbul</a>
                 </div><!-- navbar-header-->
 
                 <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -42,9 +43,9 @@
                   https://github.com/mcspring/bootstrap-glyphicons-all/wiki/Bootstrap-Glyphicons-Preview
                   http://glyphicons.com/
                   http://marcoceppi.github.io/bootstrap-glyphicons/   this link is for big icons -->
-                  <div class="btn-group" role="group" aria-label="...">
+                  <!--<div class="btn-group" role="group" aria-label="...">
                     <button title="Draw Freehand" data-placement='bottom' type="button" class="btn btn-default toolbar"><span class="fa fa-pencil"></span></button>
-                  </div>
+                  </div>-->
                   <div class="btn-group" role="group" aria-label="...">
                     <button title="Draw Point" data-placement='bottom' type="button" class="btn btn-default toolbar"><span class="glyphicon glyphicon-pushpin"></span></button>
                   </div>
@@ -54,16 +55,22 @@
                   <div class="btn-group" role="group" aria-label="...">
                     <button title="Draw Polygon" data-placement='bottom' type="button" class="btn btn-default toolbar"><span class="glyphicon glyphicon-vector-path-polygon"></i></button>
                   </div>
-                  <div class="btn-group" role="group" aria-label="...">
+                  <!--<div class="btn-group" role="group" aria-label="...">
                     <button title="Clear Shapes" data-placement='bottom' type="button" class="btn btn-default toolbar"><span class="fa fa-times"></i></button>
-                  </div>
+                  </div>-->
                   <div style="width:30px;" class="btn-group" role="group" aria-label="..."></div>
-                  <!-- Following are calculate buttons -->
+                  <!-- Following are custom buttons -->
                   <div class="btn-group" role="group" aria-label="...">
-                    <button title="Calculate Length" data-placement='bottom' type="button" class="btn btn-default toolbar"><span class="glyphicon glyphicon-ruller"></i></button>
+                    <button title="Heat-Map" data-placement='bottom' type="button" class="btn btn-default toolbar"><span class="glyphicon glyphicon-heat"></i></button>
                   </div>
                   <div class="btn-group" role="group" aria-label="...">
-                    <button title="Calculate Area" data-placement='bottom' type="button" class="btn btn-default toolbar"><span class="glyphicon glyphicon-vector-path-square"></i></button>
+                    <button title="Time-Series" data-placement='bottom' type="button" class="btn btn-default toolbar"><span class="glyphicon glyphicon-time"></i></button>
+                  </div>
+                  <div class="btn-group" role="group" aria-label="...">
+                    <button title="Average Traffic" data-placement='bottom' type="button" class="btn btn-default toolbar"><span class="glyphicon glyphicon-car"></i></button>
+                  </div>
+                  <div class="btn-group" role="group" aria-label="...">
+                    <button title="Prosperity Map" data-placement='bottom' type="button" class="btn btn-default toolbar"><span class="fa fa-smile-o"></i></button>
                   </div>
                   <div style="width:30px;" class="btn-group" role="group" aria-label="..."></div>
                   <!-- Following are charts -->
@@ -89,6 +96,9 @@
                   </div>
                   <div class="btn-group" role="group" aria-label="...">
                     <button title="Print Map" data-placement='bottom' type="button" class="btn btn-default toolbar" onclick="printMap()"><span class="fa fa-print"></span></button>
+                  </div>
+                  <div class="btn-group" role="group" aria-label="...">
+                    <button title="Generate Report" data-placement='bottom' style="color: red;" type="button" class="btn btn-default toolbar" onclick=""><span class="fa fa-file-pdf-o"></span></button>
                   </div>
                 </div>
     </nav>
@@ -223,6 +233,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
+    <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-draw/v0.2.3/leaflet.draw.js'></script>
+    <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-geodesy/v0.1.0/leaflet-geodesy.js'></script>
     <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.0.0/Chart.js"></script>
     <!-- <script>

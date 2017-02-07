@@ -365,7 +365,7 @@ var regionalBoundary = {
         "Panoramas_items_0_span_1": 45,
         "Panoramas_items_0_span_0": 90,
         "GeocoderMetaData_precision": "other",
-        "GeocoderMetaData_AddressDetails_Country_AdministrativeArea_AdministrativeAreaName": "İstanbul",
+        "GeocoderMetaData_descriptionDetails_Country_AdministrativeArea_AdministrativeAreaName": "İstanbul",
         "id": "1",
         "Panoramas_items_0_direction_0": 126.6,
         "SearchMetaData_logId": "dHlwZT1nZW9jb2RlcjthZGRyZXNzPVTDvHJraXllLCDEsHN0YW5idWwsIEJlxZ9pa3RhxZ8sIE9ydGFrw7Z5IE1oLi8yOS4wMzA2MjEsNDEuMDQ5ODA5",
@@ -376,23 +376,23 @@ var regionalBoundary = {
         "boundedBy_0_0": 29.022824,
         "GeocoderMetaData_InternalToponymInfo_Point_coordinates_0": 29.030621,
         "URIMetaData_URIs_0_uri": "ymapsbm1://geo?ll=29.031%2C41.050&spn=0.011%2C0.014&text=T%C3%BCrkiye%2C%20%C4%B0stanbul%2C%20Be%C5%9Fikta%C5%9F%2C%20Ortak%C3%B6y%20Mh.",
-        "GeocoderMetaData_AddressDetails_Country_CountryNameCode": "TR",
-        "GeocoderMetaData_AddressDetails_Country_AddressLine": "İstanbul, Beşiktaş, Ortaköy Mh.",
+        "GeocoderMetaData_descriptionDetails_Country_CountryNameCode": "TR",
+        "GeocoderMetaData_descriptionDetails_Country_descriptionLine": "İstanbul, Beşiktaş, Ortaköy Mh.",
         "Panoramas_items_0_Point_type": "Point",
         "description": "Beşiktaş, İstanbul, Türkiye",
-        "GeocoderMetaData_AddressDetails_Country_AdministrativeArea_SubAdministrativeArea_Locality_DependentLocality_DependentLocalityName": "Ortaköy Mh.",
+        "GeocoderMetaData_descriptionDetails_Country_AdministrativeArea_SubAdministrativeArea_Locality_DependentLocality_DependentLocalityName": "Ortaköy Mh.",
         "GeocoderMetaData_InternalToponymInfo_Point_type": "Point",
         "GeocoderMetaData_kind": "district",
         "Panoramas_items_0_id": "1246915994_806257524_23_1415102236",
         "Panoramas_items_0_direction_1": 10,
         "name": "Ortaköy Mh.",
         "GeocoderMetaData_text": "Türkiye, İstanbul, Beşiktaş, Ortaköy Mh.",
-        "GeocoderMetaData_AddressDetails_Country_AdministrativeArea_SubAdministrativeArea_SubAdministrativeAreaName": "Beşiktaş",
+        "GeocoderMetaData_descriptionDetails_Country_AdministrativeArea_SubAdministrativeArea_SubAdministrativeAreaName": "Beşiktaş",
         "Panoramas_items_0_Point_coordinates_1": 41.0498305007,
         "GeocoderMetaData_InternalToponymInfo_houses": 0,
         "GeocoderMetaData_InternalToponymInfo_Point_coordinates_1": 41.049809,
         "Panoramas_items_0_Point_coordinates_0": 29.0305826444,
-        "GeocoderMetaData_AddressDetails_Country_CountryName": "Türkiye"
+        "GeocoderMetaData_descriptionDetails_Country_CountryName": "Türkiye"
       }
     }
   ]
@@ -413,7 +413,7 @@ var workCenter = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ortaköy Mh. Muallim Naci Cd. No:43, Ortaköy, Beşiktaş, İstanbul",
+        "description": "Ortaköy Mh. Muallim Naci Cd. No:43, Ortaköy, Beşiktaş, İstanbul",
         "marker-color": "#0101DF",
         "marker-size": "small",
         "marker-symbol": "pitch"
@@ -430,7 +430,7 @@ var workCenter = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ortaköy Mh. Muallim Naci Cd. 69, Beşiktaş, İstanbul",
+        "description": "Ortaköy Mh. Muallim Naci Cd. 69, Beşiktaş, İstanbul",
         "marker-color": "#0101DF",
         "marker-size": "small",
         "marker-symbol": "pitch"
@@ -454,7 +454,7 @@ var theater = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Dereboyu Cad. No:12/A K:1, Ortaköy, Beşiktaş, İstanbul - Avrupa (Ortaköy Kültür Merkezi 1. Katında)",
+        "description": "Dereboyu Cad. No:12/A K:1, Ortaköy, Beşiktaş, İstanbul - Avrupa (Ortaköy Kültür Merkezi 1. Katında)",
         "marker-color": "#01DFD7",
         "marker-size": "small",
         "marker-symbol": "marker"
@@ -478,7 +478,7 @@ var supermarket = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ortaköy Mh. Aydınlık Sk. No:2, Ortaköy, Beşiktaş, İstanbul",
+        "description": "Ortaköy Mh. Aydınlık Sk. No:2, Ortaköy, Beşiktaş, İstanbul",
         "marker-color": "#DF013A",
         "marker-size": "small",
         "marker-symbol": "grocery"
@@ -495,7 +495,7 @@ var supermarket = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ulus Mh. Ahmet Adnan Saygun Cd. No:1, Beşiktaş, İstanbul",
+        "description": "Ulus Mh. Ahmet Adnan Saygun Cd. No:1, Beşiktaş, İstanbul",
         "marker-color": "#DF013A",
         "marker-size": "small",
         "marker-symbol": "grocery"
@@ -512,7 +512,7 @@ var supermarket = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ortaköy Mh. Dereboyu Cd. No:82, Ortaköy, Beşiktaş, İstanbul",
+        "description": "Ortaköy Mh. Dereboyu Cd. No:82, Ortaköy, Beşiktaş, İstanbul",
         "marker-color": "#DF013A",
         "marker-size": "small",
         "marker-symbol": "grocery"
@@ -529,7 +529,7 @@ var supermarket = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Dereboyu Cad. No:58/A, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "description": "Dereboyu Cad. No:58/A, Ortaköy, Beşiktaş, İstanbul - Avrupa",
         "marker-color": "#DF013A",
         "marker-size": "small",
         "marker-symbol": "grocery"
@@ -546,7 +546,7 @@ var supermarket = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ortaköy Mah. Dereboyu Cad. Ambarlı Sok. No:118, Beşiktaş, İstanbul",
+        "description": "Ortaköy Mah. Dereboyu Cad. Ambarlı Sok. No:118, Beşiktaş, İstanbul",
         "marker-color": "#DF013A",
         "marker-size": "small",
         "marker-symbol": "grocery"
@@ -563,7 +563,7 @@ var supermarket = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ortaköy Mah. Dereboyu Cad. No:No:174- 176, Beşiktaş, İstanbul",
+        "description": "Ortaköy Mah. Dereboyu Cad. No:No:174- 176, Beşiktaş, İstanbul",
         "marker-color": "#DF013A",
         "marker-size": "small",
         "marker-symbol": "grocery"
@@ -580,7 +580,7 @@ var supermarket = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "1.Bölge Ortaköy Mah. Ambarlı Dereyolu No:11 D:3-4-5, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "description": "1.Bölge Ortaköy Mah. Ambarlı Dereyolu No:11 D:3-4-5, Ortaköy, Beşiktaş, İstanbul - Avrupa",
         "marker-color": "#DF013A",
         "marker-size": "small",
         "marker-symbol": "grocery"
@@ -604,7 +604,7 @@ var sportsClub = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Dereboyu Cad. No:10, Ortaköy, Beşiktaş, İstanbul - Avrupa (Ortaköy Princess Hotel İçinde)",
+        "description": "Dereboyu Cad. No:10, Ortaköy, Beşiktaş, İstanbul - Avrupa (Ortaköy Princess Hotel İçinde)",
         "marker-color": "#01DF01",
         "marker-size": "small",
         "marker-symbol": "hospital"
@@ -621,7 +621,7 @@ var sportsClub = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ulus Mah. Adnan Saygun THY Sitesi Yolu Cad. No:3, Levazım, Beşiktaş, İstanbul - Avrupa",
+        "description": "Ulus Mah. Adnan Saygun THY Sitesi Yolu Cad. No:3, Levazım, Beşiktaş, İstanbul - Avrupa",
         "marker-color": "#01DF01",
         "marker-size": "small",
         "marker-symbol": "hospital"
@@ -638,7 +638,7 @@ var sportsClub = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Dereboyu Ambarlıdere Yolu Cad. No:4 K:1, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "description": "Dereboyu Ambarlıdere Yolu Cad. No:4 K:1, Ortaköy, Beşiktaş, İstanbul - Avrupa",
         "marker-color": "#01DF01",
         "marker-size": "small",
         "marker-symbol": "hospital"
@@ -662,7 +662,7 @@ var primarySchool = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ulus Mah. Gürcü Kızı Portakal Yokuşu Sok. No:87, Levazım, Beşiktaş, İstanbul - Avrupa",
+        "description": "Ulus Mah. Gürcü Kızı Portakal Yokuşu Sok. No:87, Levazım, Beşiktaş, İstanbul - Avrupa",
         "marker-color": "#A5DF00",
         "marker-size": "small",
         "marker-symbol": "library"
@@ -686,7 +686,7 @@ var police = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Muallim Naci Cad. No:59, Ortaköy, Beşiktaş, İstanbul",
+        "description": "Muallim Naci Cad. No:59, Ortaköy, Beşiktaş, İstanbul",
         "marker-color": "#A901DB",
         "marker-size": "small",
         "marker-symbol": "town-hall"
@@ -710,7 +710,7 @@ var pharmacy = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ortaköy Mahallesi Ambarlıdere Sok. No:4/A, Ortaköy, Beşiktaş, İstanbul (Ortaköy 3M Migros Yanı)",
+        "description": "Ortaköy Mahallesi Ambarlıdere Sok. No:4/A, Ortaköy, Beşiktaş, İstanbul (Ortaköy 3M Migros Yanı)",
         "marker-color": "#01DF01",
         "marker-size": "small",
         "marker-symbol": "hospital"
@@ -727,7 +727,7 @@ var pharmacy = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ulus Mahallesi Ahmet Adnan Saygun Cad. No:68/11, Ulus, Beşiktaş, İstanbul (TRT Karşısı)",
+        "description": "Ulus Mahallesi Ahmet Adnan Saygun Cad. No:68/11, Ulus, Beşiktaş, İstanbul (TRT Karşısı)",
         "marker-color": "#01DF01",
         "marker-size": "small",
         "marker-symbol": "hospital"
@@ -744,7 +744,7 @@ var pharmacy = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ortaköy Mahallesi Dereboyu Cad. No:60/C, Ortaköy, Beşiktaş, İstanbul (Şok  Market Yanı,Leziz Piliç Karşısı)",
+        "description": "Ortaköy Mahallesi Dereboyu Cad. No:60/C, Ortaköy, Beşiktaş, İstanbul (Şok  Market Yanı,Leziz Piliç Karşısı)",
         "marker-color": "#01DF01",
         "marker-size": "small",
         "marker-symbol": "hospital"
@@ -768,7 +768,7 @@ var mosque = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ortaköy Mah. Revaniçi Sok., Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "description": "Ortaköy Mah. Revaniçi Sok., Ortaköy, Beşiktaş, İstanbul - Avrupa",
         "marker-color": "#01DFD7",
         "marker-size": "small",
         "marker-symbol": "marker"
@@ -792,7 +792,7 @@ var middleSchool = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ulus Mah. Gürcü Kızı Portakal Yokuşu Sok. No:87, Levazım, Beşiktaş, İstanbul - Avrupa",
+        "description": "Ulus Mah. Gürcü Kızı Portakal Yokuşu Sok. No:87, Levazım, Beşiktaş, İstanbul - Avrupa",
         "marker-color": "#A5DF00",
         "marker-size": "small",
         "marker-symbol": "library"
@@ -816,7 +816,7 @@ var market = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Dereboyu Cad. No:58/A, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "description": "Dereboyu Cad. No:58/A, Ortaköy, Beşiktaş, İstanbul - Avrupa",
         "marker-color": "#DF013A",
         "marker-size": "small",
         "marker-symbol": "grocery"
@@ -833,7 +833,7 @@ var market = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ortaköy Mh. Dereboyu Cd. No:82, Ortaköy, Beşiktaş, İstanbul",
+        "description": "Ortaköy Mh. Dereboyu Cd. No:82, Ortaköy, Beşiktaş, İstanbul",
         "marker-color": "#DF013A",
         "marker-size": "small",
         "marker-symbol": "grocery"
@@ -850,7 +850,7 @@ var market = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Dereboyu Cad. No:64/A, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "description": "Dereboyu Cad. No:64/A, Ortaköy, Beşiktaş, İstanbul - Avrupa",
         "marker-color": "#DF013A",
         "marker-size": "small",
         "marker-symbol": "grocery"
@@ -867,7 +867,7 @@ var market = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ortaköy Mh. Aydınlık Sk. No:2, Ortaköy, Beşiktaş, İstanbul",
+        "description": "Ortaköy Mh. Aydınlık Sk. No:2, Ortaköy, Beşiktaş, İstanbul",
         "marker-color": "#DF013A",
         "marker-size": "small",
         "marker-symbol": "grocery"
@@ -884,7 +884,7 @@ var market = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ulus Mh. Ahmet Adnan Saygun Cd. No:1, Beşiktaş, İstanbul",
+        "description": "Ulus Mh. Ahmet Adnan Saygun Cd. No:1, Beşiktaş, İstanbul",
         "marker-color": "#DF013A",
         "marker-size": "small",
         "marker-symbol": "grocery"
@@ -901,7 +901,7 @@ var market = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Gürcü Kızı Sok. No:7, Beşiktaş Merkez, Beşiktaş, İstanbul - Avrupa",
+        "description": "Gürcü Kızı Sok. No:7, Beşiktaş Merkez, Beşiktaş, İstanbul - Avrupa",
         "marker-color": "#DF013A",
         "marker-size": "small",
         "marker-symbol": "grocery"
@@ -918,7 +918,7 @@ var market = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Dereboyu Cad. No:26/A, Beşiktaş Merkez, Beşiktaş, İstanbul - Avrupa",
+        "description": "Dereboyu Cad. No:26/A, Beşiktaş Merkez, Beşiktaş, İstanbul - Avrupa",
         "marker-color": "#DF013A",
         "marker-size": "small",
         "marker-symbol": "grocery"
@@ -935,7 +935,7 @@ var market = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "1.Bölge Ortaköy Mah. Ambarlı Dereyolu No:11 D:3-4-5, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "description": "1.Bölge Ortaköy Mah. Ambarlı Dereyolu No:11 D:3-4-5, Ortaköy, Beşiktaş, İstanbul - Avrupa",
         "marker-color": "#DF013A",
         "marker-size": "small",
         "marker-symbol": "grocery"
@@ -952,7 +952,7 @@ var market = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ortaköy Dereboyu Cd. No:50/A, Ortaköy Mh., Beşiktaş, İstanbul",
+        "description": "Ortaköy Dereboyu Cd. No:50/A, Ortaköy Mh., Beşiktaş, İstanbul",
         "marker-color": "#DF013A",
         "marker-size": "small",
         "marker-symbol": "grocery"
@@ -976,7 +976,7 @@ var library = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Derebeyu Cad. No:12/A, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "description": "Derebeyu Cad. No:12/A, Ortaköy, Beşiktaş, İstanbul - Avrupa",
         "marker-color": "#A5DF00",
         "marker-size": "small",
         "marker-symbol": "library"
@@ -1000,7 +1000,7 @@ var hotel = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Yıldız Mh. Salhane Sk No:1/A, Ortaköy, Beşiktaş, İstanbul",
+        "description": "Yıldız Mh. Salhane Sk No:1/A, Ortaköy, Beşiktaş, İstanbul",
         "marker-color": "#DF7401",
         "marker-size": "small",
         "marker-symbol": "restaurant"
@@ -1017,7 +1017,7 @@ var hotel = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Mecidiye Mh. Büyükşekerci Sk. No:33,  ortaköy, Beşiktaş, İstanbul",
+        "description": "Mecidiye Mh. Büyükşekerci Sk. No:33,  ortaköy, Beşiktaş, İstanbul",
         "marker-color": "#DF7401",
         "marker-size": "small",
         "marker-symbol": "restaurant"
@@ -1034,7 +1034,7 @@ var hotel = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ortaköy Mh. Dereboyu Cd. Refik Fenmen Çk. 2, Beşiktaş, İstanbul",
+        "description": "Ortaköy Mh. Dereboyu Cd. Refik Fenmen Çk. 2, Beşiktaş, İstanbul",
         "marker-color": "#DF7401",
         "marker-size": "small",
         "marker-symbol": "restaurant"
@@ -1051,7 +1051,7 @@ var hotel = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ortaköy Mh. Reşat Ağa Sk. No:7, Beşiktaş, İstanbul",
+        "description": "Ortaköy Mh. Reşat Ağa Sk. No:7, Beşiktaş, İstanbul",
         "marker-color": "#DF7401",
         "marker-size": "small",
         "marker-symbol": "restaurant"
@@ -1068,7 +1068,7 @@ var hotel = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ortaköy Mh. Ortabayır Sk. No:4, Ortaköy, Beşiktaş, İstanbul",
+        "description": "Ortaköy Mh. Ortabayır Sk. No:4, Ortaköy, Beşiktaş, İstanbul",
         "marker-color": "#DF7401",
         "marker-size": "small",
         "marker-symbol": "restaurant"
@@ -1085,7 +1085,7 @@ var hotel = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ortaköy Mah. Portakal Yokuşu Cad. No:21, Beşiktaş, İstanbul",
+        "description": "Ortaköy Mah. Portakal Yokuşu Cad. No:21, Beşiktaş, İstanbul",
         "marker-color": "#DF7401",
         "marker-size": "small",
         "marker-symbol": "restaurant"
@@ -1102,7 +1102,7 @@ var hotel = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ortaköy Mh. Dereboyu Cd. No:106/A, Ortaköy, Beşiktaş, İstanbul",
+        "description": "Ortaköy Mh. Dereboyu Cd. No:106/A, Ortaköy, Beşiktaş, İstanbul",
         "marker-color": "#DF7401",
         "marker-size": "small",
         "marker-symbol": "restaurant"
@@ -1119,7 +1119,7 @@ var hotel = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ortaköy Mh. Amcabey Sk. No:16, Beşiktaş, İstanbul",
+        "description": "Ortaköy Mh. Amcabey Sk. No:16, Beşiktaş, İstanbul",
         "marker-color": "#DF7401",
         "marker-size": "small",
         "marker-symbol": "restaurant"
@@ -1136,7 +1136,7 @@ var hotel = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "İstanbul Dereboyu Cad. No:10 Dereboyu Street. No:10, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "description": "İstanbul Dereboyu Cad. No:10 Dereboyu Street. No:10, Ortaköy, Beşiktaş, İstanbul - Avrupa",
         "marker-color": "#DF7401",
         "marker-size": "small",
         "marker-symbol": "restaurant"
@@ -1153,7 +1153,7 @@ var hotel = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Batsíon, Batsíon",
+        "description": "Batsíon, Batsíon",
         "marker-color": "#DF7401",
         "marker-size": "small",
         "marker-symbol": "restaurant"
@@ -1170,7 +1170,7 @@ var hotel = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ortaköy Mh. Dereboyu Cd. Bulgurcu Sk. 4,  Ortaköy, Beşiktaş, İstanbul",
+        "description": "Ortaköy Mh. Dereboyu Cd. Bulgurcu Sk. 4,  Ortaköy, Beşiktaş, İstanbul",
         "marker-color": "#DF7401",
         "marker-size": "small",
         "marker-symbol": "restaurant"
@@ -1187,7 +1187,7 @@ var hotel = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "İstanbul Portakal Yokuşu Cad. No:17 Portakal Yokuşu Cad., No:17, Ortaköy, Beşiktaş, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "description": "İstanbul Portakal Yokuşu Cad. No:17 Portakal Yokuşu Cad., No:17, Ortaköy, Beşiktaş, Ortaköy, Beşiktaş, İstanbul - Avrupa",
         "marker-color": "#DF7401",
         "marker-size": "small",
         "marker-symbol": "restaurant"
@@ -1204,7 +1204,7 @@ var hotel = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ortaköy Mh. Portakal Yokuşu Cd. No:17/19, Ortaköy, Beşiktaş, İstanbul",
+        "description": "Ortaköy Mh. Portakal Yokuşu Cd. No:17/19, Ortaköy, Beşiktaş, İstanbul",
         "marker-color": "#DF7401",
         "marker-size": "small",
         "marker-symbol": "restaurant"
@@ -1228,7 +1228,7 @@ var highSchool = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Mecidiye Mh. Dereboyu Cd. No:24, Ortaköy, Beşiktaş, İstanbul",
+        "description": "Mecidiye Mh. Dereboyu Cd. No:24, Ortaköy, Beşiktaş, İstanbul",
         "marker-color": "#A5DF00",
         "marker-size": "small",
         "marker-symbol": "library"
@@ -1245,7 +1245,7 @@ var highSchool = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ulus Mah. Gürcü Kızı Portakal Yokuşu Sok. No:87, Levazım, Beşiktaş, İstanbul - Avrupa",
+        "description": "Ulus Mah. Gürcü Kızı Portakal Yokuşu Sok. No:87, Levazım, Beşiktaş, İstanbul - Avrupa",
         "marker-color": "#A5DF00",
         "marker-size": "small",
         "marker-symbol": "library"
@@ -1269,7 +1269,7 @@ var groceryStore = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Gürcü Kızı Sok. No:7, Beşiktaş Merkez, Beşiktaş, İstanbul - Avrupa",
+        "description": "Gürcü Kızı Sok. No:7, Beşiktaş Merkez, Beşiktaş, İstanbul - Avrupa",
         "marker-color": "#DF013A",
         "marker-size": "small",
         "marker-symbol": "grocery"
@@ -1286,7 +1286,7 @@ var groceryStore = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Mecidiye Mh. Dereboyu Cd. No:82/B, Ortaköy, Beşiktaş, İstanbul",
+        "description": "Mecidiye Mh. Dereboyu Cd. No:82/B, Ortaköy, Beşiktaş, İstanbul",
         "marker-color": "#DF013A",
         "marker-size": "small",
         "marker-symbol": "grocery"
@@ -1303,7 +1303,7 @@ var groceryStore = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ortaköy Dereboyu Cd. No:50/A, Ortaköy Mh., Beşiktaş, İstanbul",
+        "description": "Ortaköy Dereboyu Cd. No:50/A, Ortaköy Mh., Beşiktaş, İstanbul",
         "marker-color": "#DF013A",
         "marker-size": "small",
         "marker-symbol": "grocery"
@@ -1320,7 +1320,7 @@ var groceryStore = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Dereboyu Cad. No:64/A, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "description": "Dereboyu Cad. No:64/A, Ortaköy, Beşiktaş, İstanbul - Avrupa",
         "marker-color": "#DF013A",
         "marker-size": "small",
         "marker-symbol": "grocery"
@@ -1337,7 +1337,7 @@ var groceryStore = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Dereboyu Cad. No:26/A, Beşiktaş Merkez, Beşiktaş, İstanbul - Avrupa",
+        "description": "Dereboyu Cad. No:26/A, Beşiktaş Merkez, Beşiktaş, İstanbul - Avrupa",
         "marker-color": "#DF013A",
         "marker-size": "small",
         "marker-symbol": "grocery"
@@ -1354,7 +1354,7 @@ var groceryStore = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ortaköy Mh. Aydınlık Sk. No:2, Ortaköy, Beşiktaş, İstanbul",
+        "description": "Ortaköy Mh. Aydınlık Sk. No:2, Ortaköy, Beşiktaş, İstanbul",
         "marker-color": "#DF013A",
         "marker-size": "small",
         "marker-symbol": "grocery"
@@ -1371,7 +1371,7 @@ var groceryStore = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ulus Mh. Ahmet Adnan Saygun Cd. No:1, Beşiktaş, İstanbul",
+        "description": "Ulus Mh. Ahmet Adnan Saygun Cd. No:1, Beşiktaş, İstanbul",
         "marker-color": "#DF013A",
         "marker-size": "small",
         "marker-symbol": "grocery"
@@ -1388,7 +1388,7 @@ var groceryStore = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "1.Bölge Ortaköy Mah. Ambarlı Dereyolu No:11 D:3-4-5, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "description": "1.Bölge Ortaköy Mah. Ambarlı Dereyolu No:11 D:3-4-5, Ortaköy, Beşiktaş, İstanbul - Avrupa",
         "marker-color": "#DF013A",
         "marker-size": "small",
         "marker-symbol": "grocery"
@@ -1412,7 +1412,7 @@ var carParking = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Muallim Naci Cad. No:18, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "description": "Muallim Naci Cad. No:18, Ortaköy, Beşiktaş, İstanbul - Avrupa",
         "marker-color": "#6E6E6E",
         "marker-size": "small",
         "marker-symbol": "car"
@@ -1429,7 +1429,7 @@ var carParking = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ortaköy Mah. Dereboyu Cad. No:58/F, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "description": "Ortaköy Mah. Dereboyu Cad. No:58/F, Ortaköy, Beşiktaş, İstanbul - Avrupa",
         "marker-color": "#6E6E6E",
         "marker-size": "small",
         "marker-symbol": "car"
@@ -1446,7 +1446,7 @@ var carParking = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Muallim Naci Cad. No:92, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "description": "Muallim Naci Cad. No:92, Ortaköy, Beşiktaş, İstanbul - Avrupa",
         "marker-color": "#6E6E6E",
         "marker-size": "small",
         "marker-symbol": "car"
@@ -1463,7 +1463,7 @@ var carParking = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ortaköy Muallim Naci Cad, Ortaköy Mh, Beşiktaş, İstanbul",
+        "description": "Ortaköy Muallim Naci Cad, Ortaköy Mh, Beşiktaş, İstanbul",
         "marker-color": "#6E6E6E",
         "marker-size": "small",
         "marker-symbol": "car"
@@ -1480,7 +1480,7 @@ var carParking = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ortaköy Mh. Dereboyu Cd. No:6, Ortaköy, Beşiktaş, İstanbul",
+        "description": "Ortaköy Mh. Dereboyu Cd. No:6, Ortaköy, Beşiktaş, İstanbul",
         "marker-color": "#6E6E6E",
         "marker-size": "small",
         "marker-symbol": "car"
@@ -1504,7 +1504,7 @@ var restaurant = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ortaköy Mh. Muallim Naci Cd. No:44, Ortaköy, Beşiktaş, İstanbul",
+        "description": "Ortaköy Mh. Muallim Naci Cd. No:44, Ortaköy, Beşiktaş, İstanbul",
         "marker-color": "#DF7401",
         "marker-size": "small",
         "marker-symbol": "restaurant"
@@ -1521,7 +1521,7 @@ var restaurant = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ortaköy Mh. Muallim Naci Cd. No:65, Ortaköy, Beşiktaş, İstanbul",
+        "description": "Ortaköy Mh. Muallim Naci Cd. No:65, Ortaköy, Beşiktaş, İstanbul",
         "marker-color": "#DF7401",
         "marker-size": "small",
         "marker-symbol": "restaurant"
@@ -1538,7 +1538,7 @@ var restaurant = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ortaköy Mh. Ortaköy Iskele Meydanı No:8, Ortaköy, Beşiktaş, İstanbul",
+        "description": "Ortaköy Mh. Ortaköy Iskele Meydanı No:8, Ortaköy, Beşiktaş, İstanbul",
         "marker-color": "#DF7401",
         "marker-size": "small",
         "marker-symbol": "restaurant"
@@ -1555,7 +1555,7 @@ var restaurant = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Muallim Naci Cad. No:51/A, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "description": "Muallim Naci Cad. No:51/A, Ortaköy, Beşiktaş, İstanbul - Avrupa",
         "marker-color": "#DF7401",
         "marker-size": "small",
         "marker-symbol": "restaurant"
@@ -1572,7 +1572,7 @@ var restaurant = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ortaköy Mh. Muallim Naci Cd. Yalı Çıkmazı Sk. No:20, Ortaköy, Beşiktaş, İstanbul",
+        "description": "Ortaköy Mh. Muallim Naci Cd. Yalı Çıkmazı Sk. No:20, Ortaköy, Beşiktaş, İstanbul",
         "marker-color": "#DF7401",
         "marker-size": "small",
         "marker-symbol": "restaurant"
@@ -1589,7 +1589,7 @@ var restaurant = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Portakal Yokuşu No:2, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "description": "Portakal Yokuşu No:2, Ortaköy, Beşiktaş, İstanbul - Avrupa",
         "marker-color": "#DF7401",
         "marker-size": "small",
         "marker-symbol": "restaurant"
@@ -1606,7 +1606,7 @@ var restaurant = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Portakal Yokuşu Cad. No:17, Ortaköy, Beşiktaş, İstanbul - Avrupa (Symbola Bosphorus İçinde)",
+        "description": "Portakal Yokuşu Cad. No:17, Ortaköy, Beşiktaş, İstanbul - Avrupa (Symbola Bosphorus İçinde)",
         "marker-color": "#DF7401",
         "marker-size": "small",
         "marker-symbol": "restaurant"
@@ -1623,7 +1623,7 @@ var restaurant = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ortaköy Mah. Muallim Naci Cad. No:41, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "description": "Ortaköy Mah. Muallim Naci Cad. No:41, Ortaköy, Beşiktaş, İstanbul - Avrupa",
         "marker-color": "#DF7401",
         "marker-size": "small",
         "marker-symbol": "restaurant"
@@ -1640,7 +1640,7 @@ var restaurant = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Muallim Naci Cad. No:71, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "description": "Muallim Naci Cad. No:71, Ortaköy, Beşiktaş, İstanbul - Avrupa",
         "marker-color": "#DF7401",
         "marker-size": "small",
         "marker-symbol": "restaurant"
@@ -1657,7 +1657,7 @@ var restaurant = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ortaköy Mh. Muallim Naci Cd. No:43/A, Ortaköy, Beşiktaş, İstanbul",
+        "description": "Ortaköy Mh. Muallim Naci Cd. No:43/A, Ortaköy, Beşiktaş, İstanbul",
         "marker-color": "#DF7401",
         "marker-size": "small",
         "marker-symbol": "restaurant"
@@ -1674,7 +1674,7 @@ var restaurant = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ulus Mh. Ahmet Adnan Saygun Cd. No:5, Ulus, Beşiktaş, İstanbul",
+        "description": "Ulus Mh. Ahmet Adnan Saygun Cd. No:5, Ulus, Beşiktaş, İstanbul",
         "marker-color": "#DF7401",
         "marker-size": "small",
         "marker-symbol": "restaurant"
@@ -1691,7 +1691,7 @@ var restaurant = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Mecidiye Mah. Dereboyu Cad. No:96/D, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "description": "Mecidiye Mah. Dereboyu Cad. No:96/D, Ortaköy, Beşiktaş, İstanbul - Avrupa",
         "marker-color": "#DF7401",
         "marker-size": "small",
         "marker-symbol": "restaurant"
@@ -1715,7 +1715,7 @@ var beautyCenter = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ortaköy Mh. Dereboyu Cd. Bulgurcu Sk. No:2/1, Beşiktaş, İstanbul - Avrupa",
+        "description": "Ortaköy Mh. Dereboyu Cd. Bulgurcu Sk. No:2/1, Beşiktaş, İstanbul - Avrupa",
         "marker-color": "#01DFD7",
         "marker-size": "small",
         "marker-symbol": "marker"
@@ -1732,7 +1732,7 @@ var beautyCenter = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Mecidiye Mh. Ambarlı Dere Yolu. Dereboyu Cd. No:15/1, Ortaköy, Beşiktaş, İstanbul",
+        "description": "Mecidiye Mh. Ambarlı Dere Yolu. Dereboyu Cd. No:15/1, Ortaköy, Beşiktaş, İstanbul",
         "marker-color": "#01DFD7",
         "marker-size": "small",
         "marker-symbol": "marker"
@@ -1749,7 +1749,7 @@ var beautyCenter = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ulus Mh. Ahmet Adnan Saygun Cd. Hakkı Şehithan Sk. No:7/B, Etiler, Beşiktaş, İstanbul",
+        "description": "Ulus Mh. Ahmet Adnan Saygun Cd. Hakkı Şehithan Sk. No:7/B, Etiler, Beşiktaş, İstanbul",
         "marker-color": "#01DFD7",
         "marker-size": "small",
         "marker-symbol": "marker"
@@ -1766,7 +1766,7 @@ var beautyCenter = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ortaköy Mah. Dereboyu Cad. No:40 D:1, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "description": "Ortaköy Mah. Dereboyu Cad. No:40 D:1, Ortaköy, Beşiktaş, İstanbul - Avrupa",
         "marker-color": "#01DFD7",
         "marker-size": "small",
         "marker-symbol": "marker"
@@ -1783,7 +1783,7 @@ var beautyCenter = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Gürcü Kızı Sok. No:15 D:1, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "description": "Gürcü Kızı Sok. No:15 D:1, Ortaköy, Beşiktaş, İstanbul - Avrupa",
         "marker-color": "#01DFD7",
         "marker-size": "small",
         "marker-symbol": "marker"
@@ -1800,7 +1800,7 @@ var beautyCenter = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Nispetiye Mh. Ahmet Adnan Saygun Cd. No:1, Etiler, Beşiktaş, İstanbul",
+        "description": "Nispetiye Mh. Ahmet Adnan Saygun Cd. No:1, Etiler, Beşiktaş, İstanbul",
         "marker-color": "#01DFD7",
         "marker-size": "small",
         "marker-symbol": "marker"
@@ -1817,7 +1817,7 @@ var beautyCenter = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ulus Mah. Ahmet Adnan Saygun Cad. No:104 Ağaoğlu Apt. K:Giriş D:1, Levazım, Beşiktaş, İstanbul - Avrupa",
+        "description": "Ulus Mah. Ahmet Adnan Saygun Cad. No:104 Ağaoğlu Apt. K:Giriş D:1, Levazım, Beşiktaş, İstanbul - Avrupa",
         "marker-color": "#01DFD7",
         "marker-size": "small",
         "marker-symbol": "marker"
@@ -1834,7 +1834,7 @@ var beautyCenter = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ortaköy Mah. Cudi Efendi Sok. No:2 D:4, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "description": "Ortaköy Mah. Cudi Efendi Sok. No:2 D:4, Ortaköy, Beşiktaş, İstanbul - Avrupa",
         "marker-color": "#01DFD7",
         "marker-size": "small",
         "marker-symbol": "marker"
@@ -1851,7 +1851,7 @@ var beautyCenter = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Dereboyu Cad. No:58 Karakaya Apt., Gayrettepe, Beşiktaş, İstanbul - Avrupa",
+        "description": "Dereboyu Cad. No:58 Karakaya Apt., Gayrettepe, Beşiktaş, İstanbul - Avrupa",
         "marker-color": "#01DFD7",
         "marker-size": "small",
         "marker-symbol": "marker"
@@ -1868,7 +1868,7 @@ var beautyCenter = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ortaköy Mah. Dereboyu Cad. No:60/A, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "description": "Ortaköy Mah. Dereboyu Cad. No:60/A, Ortaköy, Beşiktaş, İstanbul - Avrupa",
         "marker-color": "#01DFD7",
         "marker-size": "small",
         "marker-symbol": "marker"
@@ -1885,7 +1885,7 @@ var beautyCenter = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Dere Boyu Cad. No:10, Ortaköy, Beşiktaş, İstanbul - Avrupa (Prenses Otel İçinde)",
+        "description": "Dere Boyu Cad. No:10, Ortaköy, Beşiktaş, İstanbul - Avrupa (Prenses Otel İçinde)",
         "marker-color": "#01DFD7",
         "marker-size": "small",
         "marker-symbol": "marker"
@@ -1902,7 +1902,7 @@ var beautyCenter = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ortaköy Mh. Dereboyu Cd. No:56/1, Ortaköy, Beşiktaş, İstanbul",
+        "description": "Ortaköy Mh. Dereboyu Cd. No:56/1, Ortaköy, Beşiktaş, İstanbul",
         "marker-color": "#01DFD7",
         "marker-size": "small",
         "marker-symbol": "marker"
@@ -1919,7 +1919,7 @@ var beautyCenter = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Dereboyu Cad. No:20 K:1, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "description": "Dereboyu Cad. No:20 K:1, Ortaköy, Beşiktaş, İstanbul - Avrupa",
         "marker-color": "#01DFD7",
         "marker-size": "small",
         "marker-symbol": "marker"
@@ -1936,7 +1936,7 @@ var beautyCenter = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ortaköy Mah. Muallim Naci Cad. No:45/B, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "description": "Ortaköy Mah. Muallim Naci Cad. No:45/B, Ortaköy, Beşiktaş, İstanbul - Avrupa",
         "marker-color": "#01DFD7",
         "marker-size": "small",
         "marker-symbol": "marker"
@@ -1953,7 +1953,7 @@ var beautyCenter = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Dereboyu Cad. No:16 D:1, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "description": "Dereboyu Cad. No:16 D:1, Ortaköy, Beşiktaş, İstanbul - Avrupa",
         "marker-color": "#01DFD7",
         "marker-size": "small",
         "marker-symbol": "marker"
@@ -1977,7 +1977,7 @@ var bar = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Dereboyu Cad. No:10, Ortaköy, Beşiktaş, İstanbul - Avrupa (Ortaköy Princess Hotel İçinde)",
+        "description": "Dereboyu Cad. No:10, Ortaköy, Beşiktaş, İstanbul - Avrupa (Ortaköy Princess Hotel İçinde)",
         "marker-color": "#DF7401",
         "marker-size": "small",
         "marker-symbol": "restaurant"
@@ -1994,7 +1994,7 @@ var bar = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ortaköy Mh. Dereboyu Cd. Dereboyu Çk.  2, Beşiktaş, İstanbul",
+        "description": "Ortaköy Mh. Dereboyu Cd. Dereboyu Çk.  2, Beşiktaş, İstanbul",
         "marker-color": "#DF7401",
         "marker-size": "small",
         "marker-symbol": "restaurant"
@@ -2011,7 +2011,7 @@ var bar = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Dereboyu Cad. No:10, Ortaköy, Beşiktaş, İstanbul - Avrupa (Princess Hotel İçinde)",
+        "description": "Dereboyu Cad. No:10, Ortaköy, Beşiktaş, İstanbul - Avrupa (Princess Hotel İçinde)",
         "marker-color": "#DF7401",
         "marker-size": "small",
         "marker-symbol": "restaurant"
@@ -2028,7 +2028,7 @@ var bar = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Kuruçeşme Mh. Muallim Naci Cd. No:71, Beşiktaş, İstanbul",
+        "description": "Kuruçeşme Mh. Muallim Naci Cd. No:71, Beşiktaş, İstanbul",
         "marker-color": "#DF7401",
         "marker-size": "small",
         "marker-symbol": "restaurant"
@@ -2045,7 +2045,7 @@ var bar = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ortaköy Mh. Muallim Naci Cd. No:65, Ortaköy, Beşiktaş, İstanbul",
+        "description": "Ortaköy Mh. Muallim Naci Cd. No:65, Ortaköy, Beşiktaş, İstanbul",
         "marker-color": "#DF7401",
         "marker-size": "small",
         "marker-symbol": "restaurant"
@@ -2062,7 +2062,7 @@ var bar = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Muallim Naci Cad. No:71, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "description": "Muallim Naci Cad. No:71, Ortaköy, Beşiktaş, İstanbul - Avrupa",
         "marker-color": "#DF7401",
         "marker-size": "small",
         "marker-symbol": "restaurant"
@@ -2079,7 +2079,7 @@ var bar = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ortaköy Mh. Muallim Naci Cd. No:65,  ortaköy, Beşiktaş, İstanbul",
+        "description": "Ortaköy Mh. Muallim Naci Cd. No:65,  ortaköy, Beşiktaş, İstanbul",
         "marker-color": "#DF7401",
         "marker-size": "small",
         "marker-symbol": "restaurant"
@@ -2096,7 +2096,7 @@ var bar = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Muallim Naci Cad. No:71, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "description": "Muallim Naci Cad. No:71, Ortaköy, Beşiktaş, İstanbul - Avrupa",
         "marker-color": "#DF7401",
         "marker-size": "small",
         "marker-symbol": "restaurant"
@@ -2113,7 +2113,7 @@ var bar = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Muallim Naci Cad. No:71, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "description": "Muallim Naci Cad. No:71, Ortaköy, Beşiktaş, İstanbul - Avrupa",
         "marker-color": "#DF7401",
         "marker-size": "small",
         "marker-symbol": "restaurant"
@@ -2130,7 +2130,7 @@ var bar = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ortaköy Mh. Muallim Naci Cd. No:44, Ortaköy, Beşiktaş, İstanbul",
+        "description": "Ortaköy Mh. Muallim Naci Cd. No:44, Ortaköy, Beşiktaş, İstanbul",
         "marker-color": "#DF7401",
         "marker-size": "small",
         "marker-symbol": "restaurant"
@@ -2147,7 +2147,7 @@ var bar = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Dereboyu Cad. No:10 K:1, Ortaköy, Beşiktaş, İstanbul - Avrupa (Ortaköy Princes Otel 1. Katında)",
+        "description": "Dereboyu Cad. No:10 K:1, Ortaköy, Beşiktaş, İstanbul - Avrupa (Ortaköy Princes Otel 1. Katında)",
         "marker-color": "#DF7401",
         "marker-size": "small",
         "marker-symbol": "restaurant"
@@ -2164,7 +2164,7 @@ var bar = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Kuruçeşme Mah. Muallim Naci Cad. No:77, Arnavutköy, Beşiktaş, İstanbul - Avrupa",
+        "description": "Kuruçeşme Mah. Muallim Naci Cad. No:77, Arnavutköy, Beşiktaş, İstanbul - Avrupa",
         "marker-color": "#DF7401",
         "marker-size": "small",
         "marker-symbol": "restaurant"
@@ -2181,7 +2181,7 @@ var bar = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Gürcü Kızı Yokuşu No:2 K:2, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "description": "Gürcü Kızı Yokuşu No:2 K:2, Ortaköy, Beşiktaş, İstanbul - Avrupa",
         "marker-color": "#DF7401",
         "marker-size": "small",
         "marker-symbol": "restaurant"
@@ -2198,7 +2198,7 @@ var bar = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Muallim Naci Cad. No:65, Ortaköy, Beşiktaş, İstanbul - Avrupa",
+        "description": "Muallim Naci Cad. No:65, Ortaköy, Beşiktaş, İstanbul - Avrupa",
         "marker-color": "#DF7401",
         "marker-size": "small",
         "marker-symbol": "restaurant"
@@ -2215,7 +2215,7 @@ var bar = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ortaköy Mh. Dereboyu Cd. No:8/A, Ortaköy, Beşiktaş, İstanbul",
+        "description": "Ortaköy Mh. Dereboyu Cd. No:8/A, Ortaköy, Beşiktaş, İstanbul",
         "marker-color": "#DF7401",
         "marker-size": "small",
         "marker-symbol": "restaurant"
@@ -2241,7 +2241,7 @@ var bank = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ortaköy Mh. Muallim Naci Cd. No:73,  ortaköy, Beşiktaş, İstanbul",
+        "description": "Ortaköy Mh. Muallim Naci Cd. No:73,  ortaköy, Beşiktaş, İstanbul",
         "marker-color": "#0101DF",
         "marker-size": "small",
         "marker-symbol": "bank"
@@ -2258,7 +2258,7 @@ var bank = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ortaköy Mah. Dereboyu Cad., Beşiktaş, İstanbul",
+        "description": "Ortaköy Mah. Dereboyu Cad., Beşiktaş, İstanbul",
         "marker-color": "#0101DF",
         "marker-size": "small",
         "marker-symbol": "bank"
@@ -2282,7 +2282,7 @@ var atm = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Ortaköy Mh. Gürcü Kızı Sk., Beşiktaş, İstanbul (Avrupa)",
+        "description": "Ortaköy Mh. Gürcü Kızı Sk., Beşiktaş, İstanbul (Avrupa)",
         "marker-color": "#0101DF",
         "marker-size": "small",
         "marker-symbol": "bank"
@@ -2299,7 +2299,7 @@ var atm = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Bebek Mahallesi Arnavutköy Cad. No:47, Beşiktaş, İstanbul",
+        "description": "Bebek Mahallesi Arnavutköy Cad. No:47, Beşiktaş, İstanbul",
         "marker-color": "#0101DF",
         "marker-size": "small",
         "marker-symbol": "bank"
@@ -2316,7 +2316,7 @@ var atm = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Mecidiye Mh.  Dereboyu Cad. No:153, Beşiktaş, İstanbul (Avrupa)",
+        "description": "Mecidiye Mh.  Dereboyu Cad. No:153, Beşiktaş, İstanbul (Avrupa)",
         "marker-color": "#0101DF",
         "marker-size": "small",
         "marker-symbol": "bank"
@@ -2333,7 +2333,7 @@ var atm = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Mecidiye Mh. Kazım Karabekir Cd. Çinçinderecd., Beşiktaş, İstanbul",
+        "description": "Mecidiye Mh. Kazım Karabekir Cd. Çinçinderecd., Beşiktaş, İstanbul",
         "marker-color": "#0101DF",
         "marker-size": "small",
         "marker-symbol": "bank"
@@ -2350,7 +2350,7 @@ var atm = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Muallim Naci Cd. No:44, Beşiktaş, İstanbul (Reina Girişinde)",
+        "description": "Muallim Naci Cd. No:44, Beşiktaş, İstanbul (Reina Girişinde)",
         "marker-color": "#0101DF",
         "marker-size": "small",
         "marker-symbol": "bank"
@@ -2367,7 +2367,7 @@ var atm = {
       "type": "Feature",
       "properties": {
         "rank": "1",
-        "address": "Mecidiye Mh. Çırağan Cad. No:93, Beşiktaş, İstanbul",
+        "description": "Mecidiye Mh. Çırağan Cad. No:93, Beşiktaş, İstanbul",
         "marker-color": "#0101DF",
         "marker-size": "small",
         "marker-symbol": "bank"
