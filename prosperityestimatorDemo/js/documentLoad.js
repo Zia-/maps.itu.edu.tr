@@ -4,8 +4,6 @@ $( document ).ready(function() {
 });
 
 
-
-
 function printMap(){
   window.print()
 }
