@@ -181,7 +181,7 @@ function showFeatureGeometricalAtribute(e) {
 
 
 ////////////////////////
-// Add Polygon
+// Add Coordinates and X-Y and Zoom
 
 map.on('mousemove', function (e) {
     /*document.getElementById('info').innerHTML =
@@ -203,6 +203,8 @@ map.on('mousemove', function (e) {
 ////////////////////////
 // Heat-Map
 
+var heatMapLayerStamp = [];
+
 function convertToArray(geojson){
   var poiArray = window[geojson];
   var jsarray = [];
@@ -216,41 +218,59 @@ function convertToArray(geojson){
 }
 
 function heatMap(){
-  // Following code will remove all GeoJSON layers and reset corresponding buttons
-  map.eachLayer(function (layer) {
-    try {
-      if (layer['_geojson'][0] !== 'undefined'){
-        map.removeLayer(layer)
-      }
-    } catch (e) {}
-  });
-  var ul = document.getElementById("menu");
-  var items = ul.getElementsByTagName("li");
-  for (var i = 0; i < items.length; ++i) {
-    if ($(items[i]).attr('class') == "active"){
-      $(items[i]).removeClass("active")
-    } else {}
-  }
-  //////////////////////////////
+  if (document.getElementById("Heat-Map").style.backgroundColor === 'rgb(255, 255, 255)'){
+    // This if-else is for toggle
 
-  $('#myModal').modal('show')
-  $('input[type=radio]').click(function() {
+    // Following code will remove all GeoJSON layers and reset corresponding buttons
     map.eachLayer(function (layer) {
-      console.log(layer);
-      /*try {
-        if (layer['_latlngs'] !== 'undefined'){
-          //map.removeLayer(layer)
-          console.log(layer);
+      try {
+        if (layer['_geojson'][0] !== 'undefined'){
+          map.removeLayer(layer)
         }
-      } catch (e) {}*/
+      } catch (e) {}
+    });
+    var ul = document.getElementById("menu");
+    var items = ul.getElementsByTagName("li");
+    for (var i = 0; i < items.length; ++i) {
+      if ($(items[i]).attr('class') == "active"){
+        $(items[i]).removeClass("active")
+      } else {}
+    }
+    //////////////////////////////
+
+    $('#myModal').modal('show')
+    $('input[type=radio]').click(function() {
+
+      map.eachLayer(function (layer) {
+        if ($.inArray(L.Util.stamp(layer), heatMapLayerStamp)){
+          // Do Nothing. Dunno How its working!!
+          // Learn more about L.Util.stamp at http://leafletjs.com/reference-1.0.3.html#util-stamp
+        } else {
+          map.removeLayer(layer)
+          heatMapLayerStamp.splice(heatMapLayerStamp.indexOf(L.Util.stamp(layer)), 1);
+        }
+      });
+      var heatMap = L.heatLayer(convertToArray($(this).val()), {maxZoom: 18}); // Details: https://github.com/Leaflet/Leaflet.heat
+      heatMapLayerStamp.push(L.Util.stamp(heatMap));
+      map.addLayer(heatMap);
     });
 
-    addressPoints = addressPoints.map(function (p) { return [p[0], p[1]]; });
-    var heatMap = L.heatLayer(convertToArray($(this).val()));
-    map.addLayer(heatMap);
+    document.getElementById("Heat-Map").style.background = 'rgb(46, 204, 113)'
 
-  });
+  } else {
+    map.eachLayer(function (layer) {
+      if ($.inArray(L.Util.stamp(layer), heatMapLayerStamp)){
+        // Do Nothing. Dunno How its working!!
+        // Learn more about L.Util.stamp at http://leafletjs.com/reference-1.0.3.html#util-stamp
+      } else {
+        map.removeLayer(layer)
+        heatMapLayerStamp.splice(heatMapLayerStamp.indexOf(L.Util.stamp(layer)), 1);
+      }
+    });
 
+    document.getElementById("Heat-Map").style.background = 'rgb(255, 255, 255)'
+
+  }
 };
 
 
@@ -265,3 +285,9 @@ function chooseMapStyle(){
     //$(this).val()
   });
 }
+
+
+
+
+////////////////////////
+// Heat-Map
