@@ -317,3 +317,32 @@ function viewData() {
     a.href = "data:text/html," + document.getElementById("divForDownloadViewData").innerHTML;
     a.click();
 }*/
+
+
+
+
+
+//////////////////////////
+// Print Map
+
+/*$("#printMapButton").click(function() {
+  console.log("1");
+    html2canvas($("#map-div"), {
+        onrendered: function(canvas) {
+          console.log("3");
+          window.location.href = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+          console.log("4");
+
+            //theCanvas = canvas;
+
+            //canvas.toBlob(function(blob) {
+            //    saveAs(blob, "Dashboard.png");
+            //});
+        }
+    });
+});*/
+
+/*$("#printMapCustom").on("click", function(e){
+
+  window.location.href = document.getElementById("livetrafficChart-area").toDataURL("image/png").replace("image/png", "image/octet-stream");
+});*/
