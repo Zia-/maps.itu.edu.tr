@@ -10,3 +10,4 @@ var map = L.mapbox.map('map-div', 'mapbox.streets-satellite', {
     minZoom: 13
 });
 map.fitBounds(bounds)
+L.control.scale({imperial:false}).addTo(map); // Add Scale
