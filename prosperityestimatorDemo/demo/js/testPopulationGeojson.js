@@ -239,7 +239,7 @@ function heatMap(){
     //////////////////////////////
 
     $('#myModal').modal('show')
-    $('input[type=radio]').click(function() {
+    $('input[name=inlineRadioOptionsHeatMap]').click(function() {
 
       map.eachLayer(function (layer) {
         if ($.inArray(L.Util.stamp(layer), heatMapLayerStamp)){

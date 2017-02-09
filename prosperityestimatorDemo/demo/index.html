@@ -11,6 +11,8 @@
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  <!--<link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.2.4/css/buttons.dataTables.min.css">-->
   <!--<link href='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css' rel='stylesheet' />-->
   <link href='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.css' rel='stylesheet' />
   <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
@@ -94,11 +96,11 @@
                   <div style="width:30px;" class="btn-group" role="group" aria-label="..."></div>
                   <!-- Following are print and save buttons -->
                   <div class="btn-group" role="group" aria-label="...">
-                    <button title="View Excel" style="background-color:#FFFFFF;" data-placement='bottom' type="button" class="btn btn-default toolbar"><span class="fa fa-table"></span></button>
+                    <button title="View Excel" style="background-color:#FFFFFF;" data-placement='bottom' type="button" class="btn btn-default toolbar" onclick="viewData()"><span class="fa fa-table"></span></button>
                   </div>
-                  <div class="btn-group" role="group" aria-label="...">
+                  <!--<div class="btn-group" role="group" aria-label="...">
                     <button title="Download Excel" style="background-color:#FFFFFF;" data-placement='bottom' type="button" class="btn btn-default toolbar"><span class="fa fa-file"></span></button>
-                  </div>
+                  </div>-->
                   <div class="btn-group" role="group" aria-label="...">
                     <button title="Print Map" style="background-color:#FFFFFF;" data-placement='bottom' type="button" class="btn btn-default toolbar" onclick="printMap()"><span class="fa fa-print"></span></button>
                   </div>
@@ -235,64 +237,64 @@
           </div>
           <div class="modal-body">
             <label class="radio-inline">
-              <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="atm"> ATM
+              <input type="radio" name="inlineRadioOptionsHeatMap" id="inlineRadio1" value="atm"> ATM
             </label>
             <label class="radio-inline">
-              <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="bank"> Bank
+              <input type="radio" name="inlineRadioOptionsHeatMap" id="inlineRadio2" value="bank"> Bank
             </label>
             <label class="radio-inline">
-              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="bar"> Bar
+              <input type="radio" name="inlineRadioOptionsHeatMap" id="inlineRadio3" value="bar"> Bar
             </label>
             <label class="radio-inline">
-              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="beautyCenter"> Beauty Center
+              <input type="radio" name="inlineRadioOptionsHeatMap" id="inlineRadio3" value="beautyCenter"> Beauty Center
             </label>
             <label class="radio-inline">
-              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="carParking"> Car Parking
+              <input type="radio" name="inlineRadioOptionsHeatMap" id="inlineRadio3" value="carParking"> Car Parking
             </label>
             <label class="radio-inline">
-              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="groceryStore"> Grocery Store
+              <input type="radio" name="inlineRadioOptionsHeatMap" id="inlineRadio3" value="groceryStore"> Grocery Store
             </label>
             <label class="radio-inline">
-              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="highSchool"> High School
+              <input type="radio" name="inlineRadioOptionsHeatMap" id="inlineRadio3" value="highSchool"> High School
             </label>
             <label class="radio-inline">
-              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="hotel"> Hotel
+              <input type="radio" name="inlineRadioOptionsHeatMap" id="inlineRadio3" value="hotel"> Hotel
             </label>
             <label class="radio-inline">
-              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="library"> Library
+              <input type="radio" name="inlineRadioOptionsHeatMap" id="inlineRadio3" value="library"> Library
             </label>
             <label class="radio-inline">
-              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="market"> Market
+              <input type="radio" name="inlineRadioOptionsHeatMap" id="inlineRadio3" value="market"> Market
             </label>
             <label class="radio-inline">
-              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="middleSchool"> Middle School
+              <input type="radio" name="inlineRadioOptionsHeatMap" id="inlineRadio3" value="middleSchool"> Middle School
             </label>
             <label class="radio-inline">
-              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="mosque"> Mosque
+              <input type="radio" name="inlineRadioOptionsHeatMap" id="inlineRadio3" value="mosque"> Mosque
             </label>
             <label class="radio-inline">
-              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="pharmacy"> Pharmacy
+              <input type="radio" name="inlineRadioOptionsHeatMap" id="inlineRadio3" value="pharmacy"> Pharmacy
             </label>
             <label class="radio-inline">
-              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="police"> Police
+              <input type="radio" name="inlineRadioOptionsHeatMap" id="inlineRadio3" value="police"> Police
             </label>
             <label class="radio-inline">
-              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="primarySchool"> Primary School
+              <input type="radio" name="inlineRadioOptionsHeatMap" id="inlineRadio3" value="primarySchool"> Primary School
             </label>
             <label class="radio-inline">
-              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="restaurant"> Restaurant
+              <input type="radio" name="inlineRadioOptionsHeatMap" id="inlineRadio3" value="restaurant"> Restaurant
             </label>
             <label class="radio-inline">
-              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="sportsClub"> Sports Club
+              <input type="radio" name="inlineRadioOptionsHeatMap" id="inlineRadio3" value="sportsClub"> Sports Club
             </label>
             <label class="radio-inline">
-              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="supermarket"> Supermarket
+              <input type="radio" name="inlineRadioOptionsHeatMap" id="inlineRadio3" value="supermarket"> Supermarket
             </label>
             <label class="radio-inline">
-              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="theater"> Theater
+              <input type="radio" name="inlineRadioOptionsHeatMap" id="inlineRadio3" value="theater"> Theater
             </label>
             <label class="radio-inline">
-              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="workCenter"> Work Center
+              <input type="radio" name="inlineRadioOptionsHeatMap" id="inlineRadio3" value="workCenter"> Work Center
             </label>
           </div>
           <!--<div class="modal-footer">
@@ -389,6 +391,122 @@
     </div>
 
 
+    <!--Modal View And Download Data-->
+    <div class="modal fade" id="myModalViewDownloadData" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <h4 class="modal-title" id="myModalLabel">Read Data</h4>
+          </div>
+          <div class="modal-body">
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptionsView" id="inlineRadio1" value="atm"> ATM
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptionsView" id="inlineRadio2" value="bank"> Bank
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptionsView" id="inlineRadio3" value="bar"> Bar
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptionsView" id="inlineRadio3" value="beautyCenter"> Beauty Center
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptionsView" id="inlineRadio3" value="carParking"> Car Parking
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptionsView" id="inlineRadio3" value="groceryStore"> Grocery Store
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptionsView" id="inlineRadio3" value="highSchool"> High School
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptionsView" id="inlineRadio3" value="hotel"> Hotel
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptionsView" id="inlineRadio3" value="library"> Library
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptionsView" id="inlineRadio3" value="market"> Market
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptionsView" id="inlineRadio3" value="middleSchool"> Middle School
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptionsView" id="inlineRadio3" value="mosque"> Mosque
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptionsView" id="inlineRadio3" value="pharmacy"> Pharmacy
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptionsView" id="inlineRadio3" value="police"> Police
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptionsView" id="inlineRadio3" value="primarySchool"> Primary School
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptionsView" id="inlineRadio3" value="restaurant"> Restaurant
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptionsView" id="inlineRadio3" value="sportsClub"> Sports Club
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptionsView" id="inlineRadio3" value="supermarket"> Supermarket
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptionsView" id="inlineRadio3" value="theater"> Theater
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptionsView" id="inlineRadio3" value="workCenter"> Work Center
+            </label>
+          </div>
+          <!--<div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>-->
+        </div>
+      </div>
+    </div>
+
+    <!--Modal Pulled Data-->
+    <div class="modal fade" id="myModalData">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 class="modal-title">View Data</h3>
+          </div>
+          <div class="modal-body" id="divForDownloadViewData">
+            <h5 class="text-center" id="viewDataHeading"></h5>
+            <table class="table table-striped" id="dataTable">
+              <thead id="tblHead">
+                <tr>
+                  <th>S.No.</th>
+                  <th>Address</th>
+                  <th>Lat-Lng</th> <!-- class="text-right" -->
+                </tr>
+              </thead>
+              <tbody id="tbodyData">
+              </tbody>
+            </table>
+            <!--<div class="form-group">
+              <input type="button" class="btn btn-warning btn-sm pull-right" value="Reset">
+              <div class="clearfix"></div>
+            </div>-->
+          </div>
+          <div class="modal-footer">
+            <!--<button type="button" class="btn btn-default " data-dismiss="modal">Close</button>-->
+            <!--Learn Download from here http://jsfiddle.net/evx9stLb/
+            OR https://datatables.net/extensions/buttons/examples/initialisation/export.html -->
+            <button type="button" class="btn btn-primary btn-danger" id="saveViewData" disabled>Download Not Allowed <span class="glyphicon glyphicon-remove"  style="color:white"></button>
+          </div>
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
 
 
 
@@ -396,6 +514,14 @@
     <!-- /#wrapper -->
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <!--<script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.4/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.flash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.print.min.js"></script>-->
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <!--<script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>-->
     <script src='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.js'></script>
