@@ -1,3 +1,7 @@
+// Good Chart Demos:
+// https://www.sitepoint.com/introduction-chart-js-2-0-six-examples/
+
+
 //////////////////
 // POI Polar Chart
 
@@ -81,87 +85,87 @@ var liveTrafficDistribution = {
     data: {
         datasets: [{
             data: liveTrafficData0_5,
-            backgroundColor: '#FF0000',
+            backgroundColor: '#FF0000', // Generate Color: http://www.perbang.dk/rgbgradient/
             label: '<5' // for legend
         },{
             data: liveTrafficData5_10,
-            backgroundColor: '#FF1500',
+            backgroundColor: '#FB1700',
             label: '5-10' // for legend
         },{
             data: liveTrafficData10_15,
-            backgroundColor: '#FF2A00',
+            backgroundColor: '#F82F00',
             label: '10-15' // for legend
         },{
             data: liveTrafficData15_20,
-            backgroundColor: '#FF3F00',
+            backgroundColor: '#F44500',
             label: '15-20' // for legend
         },{
             data: liveTrafficData20_25,
-            backgroundColor: '#FF5400',
+            backgroundColor: '#F15B00',
             label: '20-25' // for legend
         },{
             data: liveTrafficData25_30,
-            backgroundColor: '#FF6A00',
+            backgroundColor: '#EE7100',
             label: '25-30' // for legend
         },{
             data: liveTrafficData30_35,
-            backgroundColor: '#FF7F00',
+            backgroundColor: '#EA8600',
             label: '30-35' // for legend
         },{
             data: liveTrafficData35_40,
-            backgroundColor: '#FF9400',
+            backgroundColor: '#E79A00',
             label: '35-40' // for legend
         },{
             data: liveTrafficData40_45,
-            backgroundColor: '#FFA900',
+            backgroundColor: '#E3AD00',
             label: '40-45' // for legend
         },{
             data: liveTrafficData45_50,
-            backgroundColor: '#FFBF00',
+            backgroundColor: '#E0C000',
             label: '45-50' // for legend
         },{
             data: liveTrafficData50_55,
-            backgroundColor: '#E9C600',
+            backgroundColor: '#DDD200',
             label: '50-55' // for legend
         },{
             data: liveTrafficData55_60,
-            backgroundColor: '#D4CD00',
+            backgroundColor: '#CFD900',
             label: '55-60' // for legend
         },{
             data: liveTrafficData60_65,
-            backgroundColor: '#BFD400',
+            backgroundColor: '#B7D600',
             label: '60-65' // for legend
         },{
             data: liveTrafficData65_70,
-            backgroundColor: '#AADB00',
+            backgroundColor: '#A0D300',
             label: '65-70' // for legend
         },{
             data: liveTrafficData70_75,
-            backgroundColor: '#94E200',
+            backgroundColor: '#8ACF00',
             label: '70-75' // for legend
         },{
             data: liveTrafficData75_80,
-            backgroundColor: '#7FE900',
+            backgroundColor: '#74CC00',
             label: '75-80' // for legend
         },{
             data: liveTrafficData80_85,
-            backgroundColor: '#6AF000',
+            backgroundColor: '#5FC800',
             label: '80-85' // for legend
         },{
             data: liveTrafficData85_90,
-            backgroundColor: '#55F700',
+            backgroundColor: '#4BC500',
             label: '85-90' // for legend
         },{
             data: liveTrafficData90_95,
-            backgroundColor: '#40FF00',
+            backgroundColor: '#37C200',
             label: '90-95' // for legend
         },{
             data: liveTrafficData95_100,
-            backgroundColor: '#00FF00',
+            backgroundColor: '#24BE00',
             label: '95-100' // for legend
         },{
             data: liveTrafficData100_more,
-            backgroundColor: '#00FF40',
+            backgroundColor: '#11BB00',
             label: '>100' // for legend
         }],
         labels: trafficLabel
@@ -277,3 +281,39 @@ $("#saveLivetrafficChart").on("click", function(e){
 
 
 /////////////////////////
+// View Data and Download
+
+function appendNewRows(attributePOI){
+  var tableBodyData = document.getElementById("tbodyData");
+  var attributePOINew = window[attributePOI]
+  for (var i=0; i<attributePOINew.features.length; i++){
+    var row = tableBodyData.insertRow(i);
+    row.insertCell(0).innerHTML = i+1;
+    row.insertCell(1).innerHTML = attributePOINew.features[i].properties.description;
+    row.insertCell(2).innerHTML = attributePOINew.features[i].geometry.coordinates[1] + "," + attributePOINew.features[i].geometry.coordinates[0];
+  }
+}
+
+function pullData(attributePOI) {
+  $("#tbodyData tr").remove();
+  appendNewRows(attributePOI);
+};
+
+function viewData() {
+    $('#myModalViewDownloadData').modal('show');
+    $('input[name=inlineRadioOptionsView]').click(function() {
+        // Update Title Name
+        pullData($(this).val());
+        document.getElementById("viewDataHeading").innerHTML = window[$(this).val()].properties;
+        $('#myModalData').modal('show');
+    });
+}
+
+/*function downloadViewDataHTML(){
+    var a = document.body.appendChild(
+        document.createElement("a")
+    );
+    a.download = "export.html";
+    a.href = "data:text/html," + document.getElementById("divForDownloadViewData").innerHTML;
+    a.click();
+}*/
