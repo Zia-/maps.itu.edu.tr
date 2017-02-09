@@ -1,4 +1,4 @@
-var toggleVar = 0;
+/*var toggleVar = 0;
 function displayData() {
   if (toggleVar == 0) {
     loadData();
@@ -64,7 +64,7 @@ function loadData() {
     }
     return 'rgb(' + R + ',' + G + ',' + B + ')'
   }
-}
+}*/
 
 
 ////////////////////////
