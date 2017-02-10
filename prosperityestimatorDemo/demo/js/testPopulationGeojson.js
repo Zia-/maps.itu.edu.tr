@@ -222,7 +222,7 @@ function heatMap(){
     // This if-else is for toggle
 
     // Following code will remove all GeoJSON layers and reset corresponding buttons
-    map.eachLayer(function (layer) {
+    /*map.eachLayer(function (layer) {
       try {
         if (layer['_geojson'][0] !== 'undefined'){
           map.removeLayer(layer)
@@ -235,7 +235,7 @@ function heatMap(){
       if ($(items[i]).attr('class') == "active"){
         $(items[i]).removeClass("active")
       } else {}
-    }
+    }*/
     //////////////////////////////
 
     $('#myModal').modal('show')
@@ -290,4 +290,47 @@ function chooseMapStyle(){
 
 
 ////////////////////////
-// Heat-Map
+// Prosperity-Map
+
+var prosperityMapStamp = [];
+
+function prosperityMap(){
+  if (document.getElementById("Prosperity-Map").style.backgroundColor === 'rgb(255, 255, 255)'){
+    // Learn how to change color from here: http://gis.stackexchange.com/questions/116159/how-to-style-specific-polygons-from-a-geojson-with-leaflet
+    var prosperityMapLayer = L.geoJson(prosperityMapGeoJSON, {
+      style: function(feature) {
+          switch (feature.properties.prosperityIndex) {
+              case 1.0: return {color: "white",weight:1,fillColor:'#08306B',fillOpacity:1};
+              case 0.9: return {color: "white",weight:1,fillColor:'#08519C',fillOpacity:1};
+              case 0.8: return {color: "white",weight:1,fillColor:'#2171B5',fillOpacity:1};
+              case 0.7: return {color: "white",weight:1,fillColor:'#4292C6',fillOpacity:1};
+              case 0.6: return {color: "white",weight:1,fillColor:'#6BAED6',fillOpacity:1};
+              case 0.5: return {color: "white",weight:1,fillColor:'#9ECAE1',fillOpacity:1};
+              case 0.4: return {color: "white",weight:1,fillColor:'#C6DBEF',fillOpacity:1};
+              case 0.3: return {color: "white",weight:1,fillColor:'#DEEBF7',fillOpacity:1};
+              case 0.2: case '0.1': case '0.0': return {color: "white",weight:1,fillColor:'#F7FBFF',fillOpacity:1};
+          }
+      }
+    });
+    map.addLayer(prosperityMapLayer);
+    prosperityMapStamp.push(L.Util.stamp(prosperityMapLayer));
+    document.getElementById("Prosperity-Map").style.background = 'rgb(46, 204, 113)'
+  } else {
+    map.eachLayer(function (layer) {
+      if ($.inArray(L.Util.stamp(layer), prosperityMapStamp)){
+        // Do Nothing. Dunno How its working!!
+        // Learn more about L.Util.stamp at http://leafletjs.com/reference-1.0.3.html#util-stamp
+      } else {
+        map.removeLayer(layer)
+        prosperityMapStamp.splice(prosperityMapStamp.indexOf(L.Util.stamp(layer)), 1);
+      }
+    });
+    document.getElementById("Prosperity-Map").style.background = 'rgb(255, 255, 255)'
+  }
+};
+
+
+
+
+////////////////////////
+// Prosperity-Map
