@@ -346,9 +346,12 @@ function startTimeSeries() {
       (function(i){ // This setTimeout() is from here: http://stackoverflow.com/questions/11764714/applying-delay-between-iterations-of-javascript-for-loop
             setTimeout(function(){
 
-              // Display Year
-              document.getElementById("timeSeriesYear").style.visibility = "visible";
-              document.getElementById("timeSeriesYear").innerText = (i+1980);
+              // Display Legend
+              document.getElementById("legendDiv").style.visibility = "visible";
+              document.getElementById("legendDiv").style.width = "70px";
+              document.getElementById("legendDiv").style.height = "145px";
+              document.getElementById("legendDiv").style.backgroundImage = "url('img/demographyLegend.png')";
+              document.getElementById("legendDiv").innerText = (i+1980);
 
               /*map.eachLayer(function (layer) { // This map.eachLayer() will update previous Circle Radius and Style
                 if ($.inArray(L.Util.stamp(layer), timeSeriesStamp)){
@@ -420,7 +423,14 @@ function timeSeries(){
       }
     });
     document.getElementById("Time-Series").style.background = 'rgb(255, 255, 255)';
-    document.getElementById("timeSeriesYear").style.visibility = "hidden";
+
+    // Remove Legend
+    document.getElementById("legendDiv").style.visibility = "hidden";
+    document.getElementById("legendDiv").style.backgroundImage = "none";
+    document.getElementById("legendDiv").style.width = "none";
+    document.getElementById("legendDiv").style.height = "none";
+    document.getElementById("legendDiv").innerText = null;
+
     timeSeriesTimer = 0;
   }
 };
