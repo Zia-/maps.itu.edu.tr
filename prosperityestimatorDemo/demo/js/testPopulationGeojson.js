@@ -296,6 +296,13 @@ var prosperityMapStamp = [];
 
 function prosperityMap(){
   if (document.getElementById("Prosperity-Map").style.backgroundColor === 'rgb(255, 255, 255)'){
+
+    // Add Legend
+    document.getElementById("legendDiv").style.visibility = "visible";
+    document.getElementById("legendDiv").style.width = "100px";
+    document.getElementById("legendDiv").style.height = "140px";
+    document.getElementById("legendDiv").style.backgroundImage = "url('img/prosperityIndexLegend.png')";
+
     // Learn how to change color from here: http://gis.stackexchange.com/questions/116159/how-to-style-specific-polygons-from-a-geojson-with-leaflet
     var prosperityMapLayer = L.geoJson(prosperityMapGeoJSON, {
       style: function(feature) {
@@ -328,7 +335,13 @@ function prosperityMap(){
         prosperityMapStamp.splice(prosperityMapStamp.indexOf(L.Util.stamp(layer)), 1);
       }
     });
-    document.getElementById("Prosperity-Map").style.background = 'rgb(255, 255, 255)'
+    document.getElementById("Prosperity-Map").style.background = 'rgb(255, 255, 255)';
+
+    // Remove Legend
+    document.getElementById("legendDiv").style.visibility = "hidden";
+    document.getElementById("legendDiv").style.backgroundImage = "none";
+    document.getElementById("legendDiv").style.width = "none";
+    document.getElementById("legendDiv").style.height = "none";
   }
 };
 
