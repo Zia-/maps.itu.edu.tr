@@ -1,0 +1,304 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.02575007454955,
+          41.050973840991
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "age": 75
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.02625345337838,
+          41.05099572702703
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "age": 88
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.02647231373874,
+          41.05007651351352
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "age": 73
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.026778718243243,
+          41.04961690675676
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "age": 24
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.027194552927927,
+          41.04959502072072
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "age": 4
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.0280262222973,
+          41.049266730180186
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "age": 72
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.0280262222973,
+          41.049266730180186
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "age": 55
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.029536358783783,
+          41.050098399549555
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "age": 10
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.028704689414415,
+          41.04977010900901
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "age": 97
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.03067443265766,
+          41.05014217162162
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "age": 90
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.028420170945946,
+          41.050361031981986
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "age": 69
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.028398284909912,
+          41.050361031981986
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "age": 82
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.02789490608108,
+          41.049967083333335
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "age": 31
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.02774170382883,
+          41.04863203513514
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "age": 9
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.029208068243243,
+          41.04896032567568
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "age": 96
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.03159364617117,
+          41.04974822297298
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "age": 49
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.03260040382883,
+          41.051039499099105
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "age": 55
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.031900050675677,
+          41.050207829729736
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "age": 98
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.03104649527027,
+          41.05084252477478
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "age": 30
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.02977710518018,
+          41.05136778963964
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "age": 1
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.02868280337838,
+          41.05042669009009
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "age": 46
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.027873020045046,
+          41.051039499099105
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "age": 63
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.02706323671171,
+          41.050645550450454
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "age": 45
+      }
+    }
+  ]
+}

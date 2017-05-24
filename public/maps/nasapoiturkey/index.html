@@ -1,0 +1,400 @@
+
+<!DOCTYPE html>
+<!-- This is a very simple example of using Web World Wind. -->
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>World Wind Example</title>
+    <!-- Include the Web World Wind library. -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+      body { margin:0; padding:0; }
+      #map { position:absolute; top:30px; bottom:0; width:100%;}
+      li { cursor: pointer; }
+    </style>
+</head>
+<body>
+
+  <div id="label" class="dropdown">
+		<button class="btn btn-disabled" type="button" style="margin-left:230px" onclick="openInNewTab('https://webworldwind.org/');">
+	  		View Different Point of Interests (POIs) in Turkey. Thx to <span class="badge">Web World Wind</span>
+		</button>
+	</div>
+
+<div id="map">
+
+  <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Point of Interest
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu" id="poiMenu">
+      <!--<li><a>ATM</a></li>-->
+      <!--<li><a>Bank</a></li>-->
+      <li><a>Bar</a></li>
+      <li><a>Beauty Center</a></li>
+      <li><a>Benzene Station</a></li>
+      <li><a>Bus Station</a></li>
+      <!--<li><a>Cafe And Restaurant</a></li>-->
+      <li><a>Car Parking</a></li>
+      <!--<li><a>Car Service</a></li>-->
+      <li><a>Cemetery</a></li>
+      <li><a>Cinema</a></li>
+      <li><a>Fire Brigade</a></li>
+      <!--<li><a>Gas Station</a></li>-->
+      <!--<li><a>Grocery Store</a></li>-->
+      <!--<li><a>High School</a></li>-->
+      <li><a>Hospital</a></li>
+      <!--<li><a>Hotel</a></li>-->
+      <li><a>Library</a></li>
+      <!--<li><a>Market</a></li>-->
+      <!--<li><a>Middle School</a></li>-->
+      <!--<li><a>Mosque</a></li>-->
+      <!--<li><a>Pharmacy</a></li>-->
+      <li><a>Police Department</a></li>
+      <li><a>Post Office PTT</a></li>
+      <!--<li><a>Primary School</a></li>-->
+      <li><a>Shopping Mall</a></li>
+      <li><a>Sports Club</a></li>
+      <!--<li><a>Supermarket</a></li>-->
+      <li><a>Theatre</a></li>
+      <li><a>Traffic Directorate</a></li>
+      <li><a>University</a></li>
+      <li><a>Work Center</a></li>
+    </ul>
+  </div>
+  <button id="legendDiv" type="button" class="btn btn-danger btn-disabled" style="cursor:default;position:absolute;left:900px;top:0;width:160px">Wait 10-15 sec</button>
+  <button id="multipleGlobeDiv" type="button" class="btn btn-success" style="position:absolute;right:0;top:0;width:130px" onclick="openInNewTab('multipleglobe.html');">Multiple Globe</button>
+
+  <!-- Create a canvas for Web World Wind. -->
+  <canvas id="canvasOne" style="width:700px;height:700px;margin-left:200px">
+      Your browser does not support HTML5 Canvas.
+  </canvas>
+
+</div>
+
+<script src="http://worldwindserver.net/webworldwind/worldwind.min.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+<script>
+    function openInNewTab(url) {
+      var win = window.open(url, '_blank');
+      win.focus();
+    }
+    // Register an event listener to be called when the page is loaded.
+    window.addEventListener("load", eventWindowLoaded, false);
+
+    // Create a World Window for the canvas.
+    var atmLayer,bankLayer,barLayer,beautyCenterLayer,benzeneStationLayer,busStationLayer,cafeAndRestaurantLayer,carParkingLayer,
+        carServiceLayer,cemeteryLayer,cinemaLayer,fireBrigadeLayer,gasStationLayer,groceryStoreLayer,highSchoolLayer,hospitalLayer,
+        hotelLayer,libraryLayer,marketLayer,middleSchoolLayer,mosqueLayer,pharmacyLayer,policeDepartmentLayer,postOfficePTTLayer,
+        primarySchoolLayer,shoppingMallLayer,sportsClubLayer,supermarketLayer,theatreLayer,trafficeDirectorateLayer,universityLayer,
+        workCenterLayer;
+    var wwd;
+    var shapeConfigurationCallback;
+
+    // Define the event listener to initialize Web World Wind.
+    function eventWindowLoaded() {
+
+        wwd = new WorldWind.WorldWindow("canvasOne");
+
+        // Add some image layers to the World Window's globe.
+        //wwd.addLayer(new WorldWind.BMNGOneImageLayer());
+        wwd.addLayer(new WorldWind.BingAerialLayer());
+
+        // Add a compass, a coordinates display and some view controls to the World Window.
+        wwd.addLayer(new WorldWind.CompassLayer());
+        wwd.addLayer(new WorldWind.CoordinatesDisplayLayer(wwd));
+        wwd.addLayer(new WorldWind.ViewControlsLayer(wwd));
+        wwd.goTo(new WorldWind.Location(39.269734, 35.271174));
+
+        // Set up the common placemark attributes.
+        var placemarkAttributes = new WorldWind.PlacemarkAttributes(null);
+        placemarkAttributes.imageScale = 0.025;
+        placemarkAttributes.imageColor = WorldWind.Color.WHITE;
+        placemarkAttributes.labelAttributes.offset = new WorldWind.Offset(
+            WorldWind.OFFSET_FRACTION, 0.5,
+            WorldWind.OFFSET_FRACTION, 1.0);
+
+        shapeConfigurationCallback = function (attributes, record) {
+            var configuration = {};
+            configuration.name = attributes.values.name || attributes.values.Name || attributes.values.NAME;
+
+            if (record.isPolygonType()) {
+                configuration.attributes = new WorldWind.ShapeAttributes(null);
+
+                // Fill the polygon with a random pastel color.
+                configuration.attributes.interiorColor = new WorldWind.Color(
+                    0.0 + 0.5 * Math.random(),
+                    0.0 + 0.5 * Math.random(),
+                    0.0 + 0.5 * Math.random(),
+                    0.0);
+
+                // Paint the outline in a darker variant of the interior color.
+                configuration.attributes.outlineColor = new WorldWind.Color(
+                    255,
+                    0,
+                    0,
+                    1.0);
+            } else {
+
+            }
+
+            return configuration;
+        };
+
+        var turkeyBoundaryLayer = new WorldWind.RenderableLayer("Turkey Boundary");
+        var turkeyBoundaryShapefile = new WorldWind.Shapefile("http://fires.itu.edu.tr/testmaps/nasaworldwindpoiturkey/shp/turkeyBoundary.shp");
+        turkeyBoundaryShapefile.load(null, shapeConfigurationCallback, turkeyBoundaryLayer);
+        wwd.addLayer(turkeyBoundaryLayer);
+
+        // Create data for Turkey.
+        /*atmLayer = new WorldWind.RenderableLayer("ATM");
+        var atmShapefile = new WorldWind.Shapefile("http://fires.itu.edu.tr/testmaps/nasaworldwindpoiturkey/shp/atm.shp");
+        atmShapefile.load(null, null, atmLayer);*/
+
+        /*bankLayer = new WorldWind.RenderableLayer("Bank");
+        var bankShapefile = new WorldWind.Shapefile("http://fires.itu.edu.tr/testmaps/nasaworldwindpoiturkey/shp/bank.shp");
+        bankShapefile.load(null, null, bankLayer);*/
+
+        barLayer = new WorldWind.RenderableLayer("Bar");
+        var barShapefile = new WorldWind.Shapefile("http://fires.itu.edu.tr/testmaps/nasaworldwindpoiturkey/shp/bar.shp");
+        barShapefile.load(null, null, barLayer);
+
+        beautyCenterLayer = new WorldWind.RenderableLayer("Beauty Center");
+        var beautyCenterShapefile = new WorldWind.Shapefile("http://fires.itu.edu.tr/testmaps/nasaworldwindpoiturkey/shp/beautyCenter.shp");
+        beautyCenterShapefile.load(null, null, beautyCenterLayer);
+
+        benzeneStationLayer = new WorldWind.RenderableLayer("Benzene Station");
+        var benzeneStationShapefile = new WorldWind.Shapefile("http://fires.itu.edu.tr/testmaps/nasaworldwindpoiturkey/shp/benzeneStation.shp");
+        benzeneStationShapefile.load(null, null, benzeneStationLayer);
+
+        busStationLayer = new WorldWind.RenderableLayer("Bus Station");
+        var busStationShapefile = new WorldWind.Shapefile("http://fires.itu.edu.tr/testmaps/nasaworldwindpoiturkey/shp/busStation.shp");
+        busStationShapefile.load(null, null, busStationLayer);
+
+        /*cafeAndRestaurantLayer = new WorldWind.RenderableLayer("Cafe And Restaurant");
+        var cafeAndRestaurantShapefile = new WorldWind.Shapefile("http://fires.itu.edu.tr/testmaps/nasaworldwindpoiturkey/shp/cafeAndRestaurant.shp");
+        cafeAndRestaurantShapefile.load(null, null, cafeAndRestaurantLayer);*/
+
+        carParkingLayer = new WorldWind.RenderableLayer("Car Parking");
+        var carParkingShapefile = new WorldWind.Shapefile("http://fires.itu.edu.tr/testmaps/nasaworldwindpoiturkey/shp/carParking.shp");
+        carParkingShapefile.load(null, null, carParkingLayer);
+
+        /*carServiceLayer = new WorldWind.RenderableLayer("Car Service");
+        var carServiceShapefile = new WorldWind.Shapefile("http://fires.itu.edu.tr/testmaps/nasaworldwindpoiturkey/shp/carService.shp");
+        carServiceShapefile.load(null, null, carServiceLayer);*/
+
+        cemeteryLayer = new WorldWind.RenderableLayer("Cemetery");
+        var cemeteryShapefile = new WorldWind.Shapefile("http://fires.itu.edu.tr/testmaps/nasaworldwindpoiturkey/shp/cemetery.shp");
+        cemeteryShapefile.load(null, null, cemeteryLayer);
+
+        cinemaLayer = new WorldWind.RenderableLayer("Cinema");
+        var cinemaShapefile = new WorldWind.Shapefile("http://fires.itu.edu.tr/testmaps/nasaworldwindpoiturkey/shp/cinema.shp");
+        cinemaShapefile.load(null, null, cinemaLayer);
+
+        fireBrigadeLayer = new WorldWind.RenderableLayer("Fire Brigade");
+        var fireBrigadeShapefile = new WorldWind.Shapefile("http://fires.itu.edu.tr/testmaps/nasaworldwindpoiturkey/shp/fireBrigade.shp");
+        fireBrigadeShapefile.load(null, null, fireBrigadeLayer);
+
+        /*gasStationLayer = new WorldWind.RenderableLayer("Gas Station");
+        var gasStationShapefile = new WorldWind.Shapefile("http://fires.itu.edu.tr/testmaps/nasaworldwindpoiturkey/shp/gasStation.shp");
+        gasStationShapefile.load(null, null, gasStationLayer);*/
+
+        /*groceryStoreLayer = new WorldWind.RenderableLayer("Grocery Store");
+        var groceryStoreShapefile = new WorldWind.Shapefile("http://fires.itu.edu.tr/testmaps/nasaworldwindpoiturkey/shp/groceryStore.shp");
+        groceryStoreShapefile.load(null, null, groceryStoreLayer);*/
+
+        /*highSchoolLayer = new WorldWind.RenderableLayer("High School");
+        var highSchoolShapefile = new WorldWind.Shapefile("http://fires.itu.edu.tr/testmaps/nasaworldwindpoiturkey/shp/highSchool.shp");
+        highSchoolShapefile.load(null, null, highSchoolLayer);*/
+
+        hospitalLayer = new WorldWind.RenderableLayer("Hospital");
+        var hospitalShapefile = new WorldWind.Shapefile("http://fires.itu.edu.tr/testmaps/nasaworldwindpoiturkey/shp/hospital.shp");
+        hospitalShapefile.load(null, null, hospitalLayer);
+
+        /*hotelLayer = new WorldWind.RenderableLayer("Hotel");
+        var hotelShapefile = new WorldWind.Shapefile("http://fires.itu.edu.tr/testmaps/nasaworldwindpoiturkey/shp/hotel.shp");
+        hotelShapefile.load(null, null, hotelLayer);*/
+
+        libraryLayer = new WorldWind.RenderableLayer("Library");
+        var libraryShapefile = new WorldWind.Shapefile("http://fires.itu.edu.tr/testmaps/nasaworldwindpoiturkey/shp/library.shp");
+        libraryShapefile.load(null, null, libraryLayer);
+
+        /*marketLayer = new WorldWind.RenderableLayer("Market");
+        var marketShapefile = new WorldWind.Shapefile("http://fires.itu.edu.tr/testmaps/nasaworldwindpoiturkey/shp/market.shp");
+        marketShapefile.load(null, null, marketLayer);*/
+
+        /*middleSchoolLayer = new WorldWind.RenderableLayer("Middle School");
+        var middleSchoolShapefile = new WorldWind.Shapefile("http://fires.itu.edu.tr/testmaps/nasaworldwindpoiturkey/shp/middleSchool.shp");
+        middleSchoolShapefile.load(null, null, middleSchoolLayer);*/
+
+        /*mosqueLayer = new WorldWind.RenderableLayer("Mosque");
+        var mosqueShapefile = new WorldWind.Shapefile("http://fires.itu.edu.tr/testmaps/nasaworldwindpoiturkey/shp/mosque.shp");
+        mosqueShapefile.load(null, null, mosqueLayer);*/
+
+        /*pharmacyLayer = new WorldWind.RenderableLayer("Pharmacy");
+        var pharmacyShapefile = new WorldWind.Shapefile("http://fires.itu.edu.tr/testmaps/nasaworldwindpoiturkey/shp/pharmacy.shp");
+        pharmacyShapefile.load(null, null, pharmacyLayer);*/
+
+        policeDepartmentLayer = new WorldWind.RenderableLayer("Police Department");
+        var policeDepartmentShapefile = new WorldWind.Shapefile("http://fires.itu.edu.tr/testmaps/nasaworldwindpoiturkey/shp/policeDepartment.shp");
+        policeDepartmentShapefile.load(null, null, policeDepartmentLayer);
+
+        postOfficePTTLayer = new WorldWind.RenderableLayer("Post Office PTT");
+        var postOfficePTTShapefile = new WorldWind.Shapefile("http://fires.itu.edu.tr/testmaps/nasaworldwindpoiturkey/shp/postOfficePTT.shp");
+        postOfficePTTShapefile.load(null, null, postOfficePTTLayer);
+
+        /*primarySchoolLayer = new WorldWind.RenderableLayer("Primary School");
+        var primarySchoolShapefile = new WorldWind.Shapefile("http://fires.itu.edu.tr/testmaps/nasaworldwindpoiturkey/shp/primarySchool.shp");
+        primarySchoolShapefile.load(null, null, primarySchoolLayer);*/
+
+        shoppingMallLayer = new WorldWind.RenderableLayer("Shopping Mall");
+        var shoppingMallShapefile = new WorldWind.Shapefile("http://fires.itu.edu.tr/testmaps/nasaworldwindpoiturkey/shp/shoppingMall.shp");
+        shoppingMallShapefile.load(null, null, shoppingMallLayer);
+
+        sportsClubLayer = new WorldWind.RenderableLayer("Sports Club");
+        var sportsClubShapefile = new WorldWind.Shapefile("http://fires.itu.edu.tr/testmaps/nasaworldwindpoiturkey/shp/sportsClub.shp");
+        sportsClubShapefile.load(null, null, sportsClubLayer);
+
+        /*supermarketLayer = new WorldWind.RenderableLayer("Supermarket");
+        var supermarketShapefile = new WorldWind.Shapefile("http://fires.itu.edu.tr/testmaps/nasaworldwindpoiturkey/shp/supermarket.shp");
+        supermarketShapefile.load(null, null, supermarketLayer);*/
+
+        theatreLayer = new WorldWind.RenderableLayer("Theatre");
+        var theatreShapefile = new WorldWind.Shapefile("http://fires.itu.edu.tr/testmaps/nasaworldwindpoiturkey/shp/theatre.shp");
+        theatreShapefile.load(null, null, theatreLayer);
+
+        trafficDirectorateLayer = new WorldWind.RenderableLayer("Traffic Directorate");
+        var trafficDirectorateShapefile = new WorldWind.Shapefile("http://fires.itu.edu.tr/testmaps/nasaworldwindpoiturkey/shp/trafficDirectorate.shp");
+        trafficDirectorateShapefile.load(null, null, trafficDirectorateLayer);
+
+        universityLayer = new WorldWind.RenderableLayer("University");
+        var universityShapefile = new WorldWind.Shapefile("http://fires.itu.edu.tr/testmaps/nasaworldwindpoiturkey/shp/university.shp");
+        universityShapefile.load(null, null, universityLayer);
+
+        workCenterLayer = new WorldWind.RenderableLayer("Work Center");
+        var workCenterShapefile = new WorldWind.Shapefile("http://fires.itu.edu.tr/testmaps/nasaworldwindpoiturkey/shp/workCenter.shp");
+        workCenterShapefile.load(null, null, workCenterLayer);
+
+    };
+
+    var clickedLayer = "";
+
+    $("#poiMenu li").on("click", function(){
+      //alert($(this).text());
+      //wwd.removeLayer(worldLayer);
+
+      if ($(this).text() == "ATM"){
+        if (clickedLayer == ""){ clickedLayer="atmLayer"; wwd.addLayer(atmLayer); document.getElementById("legendDiv").innerText = "ATM";}
+        else { wwd.removeLayer(window[clickedLayer]); clickedLayer="atmLayer"; wwd.addLayer(atmLayer); document.getElementById("legendDiv").innerText = "ATM";}
+        /*featLayer = "featureLayer" + String($(this).text().replace(/\s/g, ''))
+        map.removeLayer(window[featLayer]);
+        $(this).removeClass("active");*/
+      } else if ($(this).text() == "Bank") {
+        if (clickedLayer == ""){ clickedLayer="bankLayer"; wwd.addLayer(bankLayer); document.getElementById("legendDiv").innerText = "Bank";}
+        else { wwd.removeLayer(window[clickedLayer]); clickedLayer="bankLayer"; wwd.addLayer(bankLayer); document.getElementById("legendDiv").innerText = "Bank";}
+      } else if ($(this).text() == "Bar") {
+        if (clickedLayer == ""){ clickedLayer="barLayer"; wwd.addLayer(barLayer); document.getElementById("legendDiv").innerText = "Bar";}
+        else { wwd.removeLayer(window[clickedLayer]); clickedLayer="barLayer"; wwd.addLayer(barLayer); document.getElementById("legendDiv").innerText = "Bar";}
+      } else if ($(this).text() == "Beauty Center") {
+        if (clickedLayer == ""){ clickedLayer="beautyCenterLayer"; wwd.addLayer(beautyCenterLayer); document.getElementById("legendDiv").innerText = "Beauty Center";}
+        else { wwd.removeLayer(window[clickedLayer]); clickedLayer="beautyCenterLayer"; wwd.addLayer(beautyCenterLayer); document.getElementById("legendDiv").innerText = "Beauty Center";}
+      } else if ($(this).text() == "Benzene Station") {
+        if (clickedLayer == ""){ clickedLayer="benzeneStationLayer"; wwd.addLayer(benzeneStationLayer); document.getElementById("legendDiv").innerText = "Benzene Station";}
+        else { wwd.removeLayer(window[clickedLayer]); clickedLayer="benzeneStationLayer"; wwd.addLayer(benzeneStationLayer); document.getElementById("legendDiv").innerText = "Benzene Station";}
+      } else if ($(this).text() == "Bus Station") {
+        if (clickedLayer == ""){ clickedLayer="busStationLayer"; wwd.addLayer(busStationLayer); document.getElementById("legendDiv").innerText = "Bus Station";}
+        else { wwd.removeLayer(window[clickedLayer]); clickedLayer="busStationLayer"; wwd.addLayer(busStationLayer); document.getElementById("legendDiv").innerText = "Bus Station";}
+      } else if ($(this).text() == "Cafe And Restaurant") {
+        if (clickedLayer == ""){ clickedLayer="cafeAndRestaurantLayer"; wwd.addLayer(cafeAndRestaurantLayer); document.getElementById("legendDiv").innerText = "Cafe And Restaurant";}
+        else { wwd.removeLayer(window[clickedLayer]); clickedLayer="cafeAndRestaurantLayer"; wwd.addLayer(cafeAndRestaurantLayer); document.getElementById("legendDiv").innerText = "Cafe And Restaurant";}
+      } else if ($(this).text() == "Car Parking") {
+        if (clickedLayer == ""){ clickedLayer="carParkingLayer"; wwd.addLayer(carParkingLayer); document.getElementById("legendDiv").innerText = "Car Parking";}
+        else { wwd.removeLayer(window[clickedLayer]); clickedLayer="carParkingLayer"; wwd.addLayer(carParkingLayer); document.getElementById("legendDiv").innerText = "Car Parking";}
+      } else if ($(this).text() == "Car Service") {
+        if (clickedLayer == ""){ clickedLayer="carServiceLayer"; wwd.addLayer(carServiceLayer); document.getElementById("legendDiv").innerText = "Car Service";}
+        else { wwd.removeLayer(window[clickedLayer]); clickedLayer="carServiceLayer"; wwd.addLayer(carServiceLayer); document.getElementById("legendDiv").innerText = "Car Service";}
+      } else if ($(this).text() == "Cemetery") {
+        if (clickedLayer == ""){ clickedLayer="cemeteryLayer"; wwd.addLayer(cemeteryLayer); document.getElementById("legendDiv").innerText = "Cemetery";}
+        else { wwd.removeLayer(window[clickedLayer]); clickedLayer="cemeteryLayer"; wwd.addLayer(cemeteryLayer); document.getElementById("legendDiv").innerText = "Cemetery";}
+      } else if ($(this).text() == "Cinema") {
+        if (clickedLayer == ""){ clickedLayer="cinemaLayer"; wwd.addLayer(cinemaLayer); document.getElementById("legendDiv").innerText = "Cinema";}
+        else { wwd.removeLayer(window[clickedLayer]); clickedLayer="cinemaLayer"; wwd.addLayer(cinemaLayer); document.getElementById("legendDiv").innerText = "Cinema";}
+      } else if ($(this).text() == "Fire Brigade") {
+        if (clickedLayer == ""){ clickedLayer="fireBrigadeLayer"; wwd.addLayer(fireBrigadeLayer); document.getElementById("legendDiv").innerText = "Fire Brigade";}
+        else { wwd.removeLayer(window[clickedLayer]); clickedLayer="fireBrigadeLayer"; wwd.addLayer(fireBrigadeLayer); document.getElementById("legendDiv").innerText = "Fire Brigade";}
+      } else if ($(this).text() == "Gas Station") {
+        if (clickedLayer == ""){ clickedLayer="gasStationLayer"; wwd.addLayer(gasStationLayer); document.getElementById("legendDiv").innerText = "Gas Station";}
+        else { wwd.removeLayer(window[clickedLayer]); clickedLayer="gasStationLayer"; wwd.addLayer(gasStationLayer); document.getElementById("legendDiv").innerText = "Gas Station";}
+      } else if ($(this).text() == "Grocery Store") {
+        if (clickedLayer == ""){ clickedLayer="groceryStoreLayer"; wwd.addLayer(groceryStoreLayer); document.getElementById("legendDiv").innerText = "Grocery Store";}
+        else { wwd.removeLayer(window[clickedLayer]); clickedLayer="groceryStoreLayer"; wwd.addLayer(groceryStoreLayer); document.getElementById("legendDiv").innerText = "Grocery Store";}
+      } else if ($(this).text() == "High School") {
+        if (clickedLayer == ""){ clickedLayer="highSchoolLayer"; wwd.addLayer(highSchoolLayer); document.getElementById("legendDiv").innerText = "High School";}
+        else { wwd.removeLayer(window[clickedLayer]); clickedLayer="highSchoolLayer"; wwd.addLayer(highSchoolLayer); document.getElementById("legendDiv").innerText = "High School";}
+      } else if ($(this).text() == "Hospital") {
+        if (clickedLayer == ""){ clickedLayer="hospitalLayer"; wwd.addLayer(hospitalLayer); document.getElementById("legendDiv").innerText = "Hospital";}
+        else { wwd.removeLayer(window[clickedLayer]); clickedLayer="hospitalLayer"; wwd.addLayer(hospitalLayer); document.getElementById("legendDiv").innerText = "Hospital";}
+      } else if ($(this).text() == "Hotel") {
+        if (clickedLayer == ""){ clickedLayer="hotelLayer"; wwd.addLayer(hotelLayer); document.getElementById("legendDiv").innerText = "Hotel";}
+        else { wwd.removeLayer(window[clickedLayer]); clickedLayer="hotelLayer"; wwd.addLayer(hotelLayer); document.getElementById("legendDiv").innerText = "Hotel";}
+      } else if ($(this).text() == "Library") {
+        if (clickedLayer == ""){ clickedLayer="libraryLayer"; wwd.addLayer(libraryLayer); document.getElementById("legendDiv").innerText = "Library";}
+        else { wwd.removeLayer(window[clickedLayer]); clickedLayer="libraryLayer"; wwd.addLayer(libraryLayer); document.getElementById("legendDiv").innerText = "Library";}
+      } else if ($(this).text() == "Market") {
+        if (clickedLayer == ""){ clickedLayer="marketLayer"; wwd.addLayer(marketLayer); document.getElementById("legendDiv").innerText = "Market";}
+        else { wwd.removeLayer(window[clickedLayer]); clickedLayer="marketLayer"; wwd.addLayer(marketLayer); document.getElementById("legendDiv").innerText = "Market";}
+      } else if ($(this).text() == "Middle School") {
+        if (clickedLayer == ""){ clickedLayer="middleSchoolLayer"; wwd.addLayer(middleSchoolLayer); document.getElementById("legendDiv").innerText = "Middle School";}
+        else { wwd.removeLayer(window[clickedLayer]); clickedLayer="middleSchoolLayer"; wwd.addLayer(middleSchoolLayer); document.getElementById("legendDiv").innerText = "Middle School";}
+      } else if ($(this).text() == "Mosque") {
+        if (clickedLayer == ""){ clickedLayer="mosqueLayer"; wwd.addLayer(mosqueLayer); document.getElementById("legendDiv").innerText = "Mosque";}
+        else { wwd.removeLayer(window[clickedLayer]); clickedLayer="mosqueLayer"; wwd.addLayer(mosqueLayer); document.getElementById("legendDiv").innerText = "Mosque";}
+      } else if ($(this).text() == "Pharmacy") {
+        if (clickedLayer == ""){ clickedLayer="pharmacyLayer"; wwd.addLayer(pharmacyLayer); document.getElementById("legendDiv").innerText = "Pharmacy";}
+        else { wwd.removeLayer(window[clickedLayer]); clickedLayer="pharmacyLayer"; wwd.addLayer(pharmacyLayer); document.getElementById("legendDiv").innerText = "Pharmacy";}
+      } else if ($(this).text() == "Police Department") {
+        if (clickedLayer == ""){ clickedLayer="policeDepartmentLayer"; wwd.addLayer(policeDepartmentLayer); document.getElementById("legendDiv").innerText = "Police Department";}
+        else { wwd.removeLayer(window[clickedLayer]); clickedLayer="policeDepartmentLayer"; wwd.addLayer(policeDepartmentLayer); document.getElementById("legendDiv").innerText = "Police Department";}
+      } else if ($(this).text() == "Post Office PTT") {
+        if (clickedLayer == ""){ clickedLayer="postOfficePTTLayer"; wwd.addLayer(postOfficePTTLayer); document.getElementById("legendDiv").innerText = "Post Office PTT";}
+        else { wwd.removeLayer(window[clickedLayer]); clickedLayer="postOfficePTTLayer"; wwd.addLayer(postOfficePTTLayer); document.getElementById("legendDiv").innerText = "Post Office PTT";}
+      } else if ($(this).text() == "Primary School") {
+        if (clickedLayer == ""){ clickedLayer="primarySchoolLayer"; wwd.addLayer(primarySchoolLayer); document.getElementById("legendDiv").innerText = "Primary School";}
+        else { wwd.removeLayer(window[clickedLayer]); clickedLayer="primarySchoolLayer"; wwd.addLayer(primarySchoolLayer); document.getElementById("legendDiv").innerText = "Primary School";}
+      } else if ($(this).text() == "Shopping Mall") {
+        if (clickedLayer == ""){ clickedLayer="shoppingMallLayer"; wwd.addLayer(shoppingMallLayer); document.getElementById("legendDiv").innerText = "Shopping Mall";}
+        else { wwd.removeLayer(window[clickedLayer]); clickedLayer="shoppingMallLayer"; wwd.addLayer(shoppingMallLayer); document.getElementById("legendDiv").innerText = "Shopping Mall";}
+      } else if ($(this).text() == "Sports Club") {
+        if (clickedLayer == ""){ clickedLayer="sportsClubLayer"; wwd.addLayer(sportsClubLayer); document.getElementById("legendDiv").innerText = "Sports Club";}
+        else { wwd.removeLayer(window[clickedLayer]); clickedLayer="sportsClubLayer"; wwd.addLayer(sportsClubLayer); document.getElementById("legendDiv").innerText = "Sports Club";}
+      } else if ($(this).text() == "Supermarket") {
+        if (clickedLayer == ""){ clickedLayer="supermarketLayer"; wwd.addLayer(supermarketLayer); document.getElementById("legendDiv").innerText = "Supermarket";}
+        else { wwd.removeLayer(window[clickedLayer]); clickedLayer="supermarketLayer"; wwd.addLayer(supermarketLayer); document.getElementById("legendDiv").innerText = "Supermarket";}
+      } else if ($(this).text() == "Theatre") {
+        if (clickedLayer == ""){ clickedLayer="theatreLayer"; wwd.addLayer(theatreLayer); document.getElementById("legendDiv").innerText = "Theatre";}
+        else { wwd.removeLayer(window[clickedLayer]); clickedLayer="theatreLayer"; wwd.addLayer(theatreLayer); document.getElementById("legendDiv").innerText = "Theatre";}
+      } else if ($(this).text() == "Traffic Directorate") {
+        if (clickedLayer == ""){ clickedLayer="trafficDirectorateLayer"; wwd.addLayer(trafficDirectorateLayer); document.getElementById("legendDiv").innerText = "Traffic Directorate";}
+        else { wwd.removeLayer(window[clickedLayer]); clickedLayer="trafficDirectorateLayer"; wwd.addLayer(trafficDirectorateLayer); document.getElementById("legendDiv").innerText = "Traffic Directorate";}
+      } else if ($(this).text() == "University") {
+        if (clickedLayer == ""){ clickedLayer="universityLayer"; wwd.addLayer(universityLayer); document.getElementById("legendDiv").innerText = "University";}
+        else { wwd.removeLayer(window[clickedLayer]); clickedLayer="universityLayer"; wwd.addLayer(universityLayer); document.getElementById("legendDiv").innerText = "University";}
+      } else if ($(this).text() == "Work Center") {
+        if (clickedLayer == ""){ clickedLayer="workCenterLayer"; wwd.addLayer(workCenterLayer); document.getElementById("legendDiv").innerText = "Work Center";}
+        else { wwd.removeLayer(window[clickedLayer]); clickedLayer="workCenterLayer"; wwd.addLayer(workCenterLayer); document.getElementById("legendDiv").innerText = "Work Center";}
+      }
+
+    });
+
+    /*function myFunction() {
+        //wwd.addLayer(new WorldWind.BMNGLayer());
+        wwd.removeLayer(worldLayer);
+    }*/
+
+</script>
+
+
+</body>
+</html>
